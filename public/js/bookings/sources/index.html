@@ -1,0 +1,228 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+        
+        <title>Booking Calendar PRO (jQuery Plugin)</title>
+        <link rel="stylesheet" type="text/css" href="dopbcp/assets/gui/css/css-reset.css" />
+        <link rel="stylesheet" type="text/css" href="dopbcp/assets/gui/css/jquery.dop.Select.css" />
+        <link rel="stylesheet" type="text/css" href="dopbcp/assets/gui/css/jquery.dop.BackendBookingCalendarPRO.css" />
+        <link rel="stylesheet" type="text/css" href="dopbcp/templates/default/css/jquery.dop.FrontendBookingCalendarPRO.css" />
+        <link rel="stylesheet" type="text/css" href="style.css" />
+
+        <script type="text/JavaScript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+        <script type="text/JavaScript" src="dopbcp/assets/js/jquery.dop.Select.js"></script>
+        <script type="text/JavaScript" src="dopbcp/assets/js/dop-prototypes.js"></script>
+        <script type="text/JavaScript" src="dopbcp/assets/js/jquery.dop.BackendBookingCalendarPRO.js"></script>
+        <script type="text/JavaScript" src="dopbcp/assets/js/jquery.dop.FrontendBookingCalendarPRO.js"></script>
+
+        <script type="text/JavaScript">
+            $(document).ready(function(){
+                $('#backend').DOPBackendBookingCalendarPRO();
+                $('#frontend').DOPFrontendBookingCalendarPRO({"discounts": {"data": {"discount": [{
+                                                                                        "position": "1",
+                                                                                        "start_time_lapse": "2",
+                                                                                        "end_time_lapse": "3",
+                                                                                        "operation": "-",
+                                                                                        "price": "10",
+                                                                                        "price_type": "percent",
+                                                                                        "price_by": "once",
+                                                                                        "translation": "New item",
+                                                                                        "rules": [
+                                                                                            {
+                                                                                                "position": "1",
+                                                                                                "start_date": "15-10-2014",
+                                                                                                "end_date": "20-10-2014",
+                                                                                                "operation": "-",
+                                                                                                "price": "10",
+                                                                                                "price_type": "percent",
+                                                                                                "price_by": "once"
+                                                                                            }
+                                                                                        ]
+                                                                                    }]},
+                                                                            "text": {"byDay": "day",
+                                                                                     "title": "Discount"}},
+                                                                    "fees": {"data": {"fees": [{"id": "1",
+                                                                                      "name": "New Fee",
+                                                                                      "operation": "+",
+                                                                                      "price": "20",
+                                                                                      "price_type": "fixed",
+                                                                                      "price_by": "once",
+                                                                                      "included": "false",
+                                                                                      "extras": "true",
+                                                                                      "cart": "false",
+                                                                                      "translation": "New tax / fee label"}]},
+                                                                    "text": {"byDay": "day",
+                                                                             "included": "Included in price",
+                                                                             "title": "Taxes & fees"}},
+                                                            "extras": {"data": {"extra": [{"id": "1",
+                                                                        "group_id": "1",
+                                                                        "position": "1",
+                                                                        "multiple_select": 'false',
+                                                                        "required": 'false',
+                                                                        "translation": "Family",
+                                                                        "group_items": [{
+                                                                                "id": "1",
+                                                                                "group_id": "1",
+                                                                                "position": "1",
+                                                                                "operation": "+",
+                                                                                "price": "15",
+                                                                                "price_type": "fixed",
+                                                                                "price_by": "day",
+                                                                                "translation": "+1 child"
+                                                                         },
+                                                                         {
+                                                                                "id": "2",
+                                                                                "group_id": "1",
+                                                                                "position": "2",
+                                                                                "operation": "+",
+                                                                                "price": "35",
+                                                                                "price_type": "fixed",
+                                                                                "price_by": "day",
+                                                                                "translation": "+2 children"
+                                                                         }]}],id:"1"},
+                                                    "text": {"byDay": "day",
+                                                             "invalid": "Select an option from",
+                                                             "title": "Extras"}}});
+
+// Get data from the database example.
+//                $('#backend').DOPBackendBookingCalendarPRO({'loadURL': 'dopbcp/php-database/load.php',
+//                                                            'sendURL': 'dopbcp/php-database/save.php'});
+//                $('#frontend').DOPFrontendBookingCalendarPRO();
+
+                $('#backend-refresh').click(function(){
+                    $('#backend').DOPBackendBookingCalendarPRO({'reinitialize': true});
+
+// Get data from the database example.                    
+//                    $('#backend').DOPBackendBookingCalendarPRO({'reinitialize': true,
+//                                                                'loadURL': 'dopbcp/php-database/load.php',
+//                                                                'saveURL': 'dopbcp/php-database/save.php'});
+                });
+
+                $('#frontend-refresh').click(function(){
+                    $('#frontend').DOPFrontendBookingCalendarPRO({'reinitialize':true,
+                                                                "discounts": {"data": {"discount": [{
+                                                                                        "position": "1",
+                                                                                        "start_time_lapse": "2",
+                                                                                        "end_time_lapse": "3",
+                                                                                        "operation": "-",
+                                                                                        "price": "10",
+                                                                                        "price_type": "percent",
+                                                                                        "price_by": "once",
+                                                                                        "translation": "New item",
+                                                                                        "rules": [
+                                                                                            {
+                                                                                                "position": "1",
+                                                                                                "start_date": "15-10-2014",
+                                                                                                "end_date": "20-10-2014",
+                                                                                                "operation": "-",
+                                                                                                "price": "10",
+                                                                                                "price_type": "percent",
+                                                                                                "price_by": "once"
+                                                                                            }
+                                                                                        ]
+                                                                                    }]},
+                                                                            "text": {"byDay": "day",
+                                                                                     "title": "Discount"}},
+                                                                    "fees": {"data": {"fees": [{"id": "1",
+                                                                                      "name": "New Fee",
+                                                                                      "operation": "+",
+                                                                                      "price": "20",
+                                                                                      "price_type": "fixed",
+                                                                                      "price_by": "once",
+                                                                                      "included": "false",
+                                                                                      "extras": "true",
+                                                                                      "cart": "false",
+                                                                                      "translation": "New tax / fee label"}]},
+                                                                    "text": {"byDay": "day",
+                                                                             "included": "Included in price",
+                                                                             "title": "Taxes & fees"}},
+                                                            "extras": {"data": {"extra": [{"id": "1",
+                                                                        "group_id": "1",
+                                                                        "position": "1",
+                                                                        "multiple_select": 'false',
+                                                                        "required": 'false',
+                                                                        "translation": "Family",
+                                                                        "group_items": [{
+                                                                                "id": "1",
+                                                                                "group_id": "1",
+                                                                                "position": "1",
+                                                                                "operation": "+",
+                                                                                "price": "15",
+                                                                                "price_type": "fixed",
+                                                                                "price_by": "day",
+                                                                                "translation": "+1 child"
+                                                                         },
+                                                                         {
+                                                                                "id": "2",
+                                                                                "group_id": "1",
+                                                                                "position": "2",
+                                                                                "operation": "+",
+                                                                                "price": "35",
+                                                                                "price_type": "fixed",
+                                                                                "price_by": "day",
+                                                                                "translation": "+2 children"
+                                                                         }]}],id:"1"},
+                                                    "text": {"byDay": "day",
+                                                             "invalid": "Select an option from",
+                                                             "title": "Extras"}}});
+
+// Get data from the database example.
+//                    $('#frontend').DOPFrontendBookingCalendarPRO({'reinitialize':true,
+//                                                                  'loadURL': 'dopbcp/php-database/load.php',
+//                                                                  'sendURL': 'dopbcp/php-database/send.php'});
+                });
+            });
+        </script> 
+   </head>
+    <body>
+
+        <div id="wrapper">
+            <h1>Booking Calendar PRO (jQuery Plugin)</h1>
+            <div id="backend-container">
+                <h2>Back End Version</h2>
+                <p>
+                    Double click on a day or select 2 different days to edit them and view the changes in the Front End Version by clicking refresh.
+                </p>
+                <input type="button" name="backend-refresh" id="backend-refresh" class="reload-btn" value="Refresh Back End Calendar" />
+                <div id="backend"></div>
+                <h3>Back End Features</h3>
+                <ul>
+                    <li>Easy integration into your Content Management System (php examples provided; save in database or file).</li>
+                    <li>Completely customizable from CSS.</li>
+                    <li>Change text.</li>
+                    <li>Change currency.</li>
+                    <li>Display multiple months at once.</li>
+                    <li>You can group days.</li>
+                    <li>Set day internal notes (only for Back End version).</li>
+                    <li>Set 4 statuses for days (Available, Booked, Special, Unavailable).</li>
+                    <li>Set Price & Promo Price.</li>
+                    <li>Set number of items available a day.</li>                    
+                    <li>...</li>
+                </ul>
+            </div>
+            <div id="frontend-container">
+                <h2>Front End Version</h2>
+                <p>
+                    If the calendar does not correspond with your edits from the Back End Version this means that somebody else is using the demo to.
+                </p>
+                <input type="button" name="frontend-refresh" id="frontend-refresh" class="reload-btn" value="Refresh Front End Calendar" />
+                <div id="frontend"></div>
+                <h3>Front End Features</h3>
+                <ul>
+                    <li>Responsive.</li>
+                    <li>Completely customizable from CSS.</li>
+                    <li>Change text.</li>
+                    <li>Change currency.</li>
+                    <li>Display multiple months at once.</li>
+                    <li>Display days with morning checkout.</li>
+                    <li>Users can view infos about any day.</li>
+                    <li>...</li>
+                </ul>
+            </div>
+        </div>
+
+    </body>
+</html>

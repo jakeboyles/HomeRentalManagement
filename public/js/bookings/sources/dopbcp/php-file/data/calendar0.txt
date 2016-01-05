@@ -1,0 +1,323 @@
+{
+    "calendar": {
+        "data": {
+            "bookingStop": 0,
+            "dateType": 1,
+            "language": "en",
+            "languages": [],
+            "view": false
+        },
+        "text": {
+            "addMonth": "Add month view",
+            "available": "available",
+            "availableMultiple": "available",
+            "booked": "booked",
+            "nextMonth": "Next month",
+            "previousMonth": "Previous month",
+            "removeMonth": "Remove month view",
+            "unavailable": "unavailable"
+        }
+    },
+    "currency": {
+        "data": {
+            "code": "USD",
+            "position": "before",
+            "sign": "$"
+        },
+        "text": {}
+    },
+    "days": {
+        "data": {
+            "available": [
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
+            ],
+            "first": 1,
+            "morningCheckOut": false,
+            "multipleSelect": true
+        },
+        "text": {
+            "names": [
+                "Sunday",
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday"
+            ],
+            "shortNames": [
+                "Su",
+                "Mo",
+                "Tu",
+                "We",
+                "Th",
+                "Fr",
+                "Sa"
+            ]
+        }
+    },
+    "months": {
+        "data": {
+            "no": 1
+        },
+        "text": {
+            "names": [
+                "January",
+                "February",
+                "March",
+                "April",
+                "May",
+                "June",
+                "July",
+                "August",
+                "September",
+                "October",
+                "November",
+                "December"
+            ],
+            "shortNames": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ]
+        }
+    },
+    "order": {
+        "data": {
+            "redirect": "",
+            "terms": false,
+            "termsLink": ""
+        },
+        "text": {
+            "book": "Book now",
+            "success": "Reservation has been added!",
+            "terms": "I accept to agree to the Terms & Conditions.",
+            "termsInvalid": "You must agree with our Terms & Conditions to continue.",
+            "title": "Order",
+            "unavailable": "The period you selected is not available anymore. The calendar will refresh to update the schedule."
+        }
+    },
+    "reservation": {
+        "data": {},
+        "text": {
+            "price": "Price",
+            "priceChange": "Price change",
+            "priceTotal": "Total",
+            "selectDays": "Please select the days from calendar.",
+            "title": "Reservation",
+            "titleDetails": "Details"
+        }
+    },
+    "search": {
+        "data": {},
+        "text": {
+            "checkIn": "Check in",
+            "checkOut": "Check out",
+            "noItems": "No. book items",
+            "noServices": "There are no services available for the period you selected.",
+            "noServicesSplitGroup": "You cannot add divided groups to a reservation.",
+            "title": "Search"
+        }
+    },
+    "form": {
+        "data": {
+            "form": [
+                {
+                    "id": "1",
+                    "form_id": "1",
+                    "type": "text",
+                    "position": "1",
+                    "multiple_select": "false",
+                    "allowed_characters": "",
+                    "size": "0",
+                    "is_email": "false",
+                    "required": "true",
+                    "add_to_day_hour_info": "false",
+                    "add_to_day_hour_body": "false",
+                    "translation": "First name"
+                },
+                {
+                    "id": "2",
+                    "form_id": "1",
+                    "type": "text",
+                    "position": "2",
+                    "multiple_select": "false",
+                    "allowed_characters": "",
+                    "size": "0",
+                    "is_email": "false",
+                    "required": "true",
+                    "add_to_day_hour_info": "false",
+                    "add_to_day_hour_body": "false",
+                    "translation": "Last name"
+                },
+                {
+                    "id": "3",
+                    "form_id": "1",
+                    "type": "text",
+                    "position": "3",
+                    "multiple_select": "false",
+                    "allowed_characters": "",
+                    "size": "0",
+                    "is_email": "true",
+                    "required": "true",
+                    "add_to_day_hour_info": "false",
+                    "add_to_day_hour_body": "false",
+                    "translation": "Email"
+                },
+                {
+                    "id": "4",
+                    "form_id": "1",
+                    "type": "text",
+                    "position": "4",
+                    "multiple_select": "false",
+                    "allowed_characters": "0123456789+-().",
+                    "size": "0",
+                    "is_email": "false",
+                    "required": "true",
+                    "add_to_day_hour_info": "false",
+                    "add_to_day_hour_body": "false",
+                    "translation": "Phone"
+                },
+                {
+                    "id": "5",
+                    "form_id": "1",
+                    "type": "textarea",
+                    "position": "5",
+                    "multiple_select": "false",
+                    "allowed_characters": "",
+                    "size": "0",
+                    "is_email": "false",
+                    "required": "true",
+                    "add_to_day_hour_info": "false",
+                    "add_to_day_hour_body": "false",
+                    "translation": "Message"
+                }
+            ],
+            "id": "1"
+        },
+        "text": {
+            "checked": "Checked",
+            "invalidEmail": "is invalid. Please enter a valid email.",
+            "required": "is required.",
+            "title": "Contact information",
+            "unchecked": "Unchecked"
+        }
+    },
+    "deposit": {
+        "data": {
+            "deposit": 0,
+            "type": "percent"
+        },
+        "text": {
+            "left": "Left to pay",
+            "title": "Deposit"
+        }
+    },
+    "discounts": {
+        "data": {
+            "discount": [
+                {
+                    "position": "1",
+                    "start_time_lapse": "1",
+                    "end_time_lapse": "3",
+                    "operation": "-",
+                    "price": "10",
+                    "price_type": "percent",
+                    "price_by": "once",
+                    "translation": "New item",
+                    "rules": [
+                        {
+                            "position": "1",
+                            "start_date": "15-10-2014",
+                            "end_date": "20-10-2014",
+                            "operation": "-",
+                            "price": "10",
+                            "price_type": "percent",
+                            "price_by": "once"
+                        }
+                    ]
+                }
+            ]
+        },
+        "text": {
+            "byDay": "day",
+            "title": "Discount"
+        }
+    },
+    "extras": {
+        "data": {
+            "extra": [
+                {
+                    "id": "1",
+                    "position": "1",
+                    "multiple_select": false,
+                    "required": true,
+                    "translation": "People",
+                    "group_items": [
+                        {
+                            "id": "1",
+                            "position": "1",
+                            "operation": "+",
+                            "price": "10",
+                            "price_type": "fixed",
+                            "price_by": "once",
+                            "translation_by": "1 person"
+                        },
+                        {
+                            "id": "2",
+                            "position": "2",
+                            "operation": "+",
+                            "price": "20",
+                            "price_type": "fixed",
+                            "price_by": "once",
+                            "translation_by": "2 persons"
+                        }
+                    ]
+                }
+            ]
+        },
+        "text": {
+            "byDay": "day",
+            "invalid": "Select an option from",
+            "title": "Extras"
+        }
+    },
+    "fees": {
+        "data": {
+            "fees": [
+                {
+                    "id": "1",
+                    "name": "New Fee",
+                    "operation": "+",
+                    "price": "10",
+                    "price_type": "fixed",
+                    "price_by": "once",
+                    "included": "false",
+                    "extras": "true",
+                    "cart": "false",
+                    "translation": "New tax / fee label"
+                }
+            ]
+        },
+        "text": {
+            "byDay": "day",
+            "included": "Included in price",
+            "title": "Taxes & fees"
+        }
+    }
+}

@@ -1,0 +1,2288 @@
+@charset "utf-8";
+
+/*
+* Title                   : Booking Calendar PRO (jQuery Plugin)
+* Version                 : 2.0
+* File                    : templates/default/css/jquery.dop.FrontendBookingCalendarPRO.css
+* File Version            : 2.0
+* Created / Last Modified : 29 September 2014
+* Author                  : Dot on Paper
+* Copyright               : © 2012 Dot on Paper
+* Website                 : http://www.dotonpaper.net
+* Description             : Booking Calendar PRO front end calendar jQuery plugin stylesheet.
+*/
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800);
+
+.DOPBCPCalendar-wrapper{
+    min-width: 240px;
+}
+
+.DOPBCPCalendar-wrapper .dopbcp-loader, .dopbcp-loader{
+    background: url('../images/loader.gif') no-repeat center center;
+    background-color: #eeeeee;
+    border: 1px solid #cccccc;
+    height: 38px;
+}
+
+/*
+ * ***************************************************************************** Container
+ */
+.DOPBCPCalendar-container{
+    background: none;
+    float: left;
+    font-family: 'Open Sans', sans-serif !important;
+    font-size: 13px;
+    line-height: 20px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.DOPBCPCalendar-strong{
+    font-weight: bold !important;
+}
+
+.DOPBCPCalendar-left{
+    float: left !important;
+}
+
+.DOPBCPCalendar-right{
+    float: right !important;
+}
+
+.DOPBCPCalendar-hidden{
+    display: none;
+}
+
+.DOPBCPCalendar-clear{
+    clear: both;
+}
+
+/*
+ * ***************************************************************************** Begin navigation.
+ */
+.DOPBCPCalendar-navigation{
+    background-color: #eeeeee;
+    border: 1px solid #cccccc;
+    margin: 0 0 5px 0;
+    padding: 0;
+    position: relative;
+}
+
+.DOPBCPCalendar-navigation .dopbcp-add-btn,
+.DOPBCPCalendar-navigation .dopbcp-next-btn,
+.DOPBCPCalendar-navigation .dopbcp-previous-btn,
+.DOPBCPCalendar-navigation .dopbcp-remove-btn{
+    background-color: #c9c9c9;
+    background-image:url('../images/sprite.png');
+    background-size: 320px 80px;
+    display: block;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 40px;
+    -webkit-transition: background-color 600ms linear;
+    -moz-transition: background-color 600ms linear;
+    -o-transition: background-color 600ms linear;
+    transition: background-color 600ms linear;
+}
+
+.DOPBCPCalendar-navigation .dopbcp-add-btn:hover,
+.DOPBCPCalendar-navigation .dopbcp-next-btn:hover,
+.DOPBCPCalendar-navigation .dopbcp-previous-btn:hover,
+.DOPBCPCalendar-navigation .dopbcp-remove-btn:hover{
+    background-color: #464646;
+}
+
+.DOPBCPCalendar-navigation .dopbcp-add-btn{
+    background-position: 0 0;
+    left: 9px;
+    top: 9px;
+}
+
+.DOPBCPCalendar-navigation .dopbcp-remove-btn{
+    background-position: -40px 0;
+    display: none;
+    left: 51px;
+    top: 9px;
+}
+
+.DOPBCPCalendar-navigation .dopbcp-remove-btn.dopbcp-no-add{
+    left: 9px;
+}
+
+.DOPBCPCalendar-navigation .dopbcp-previous-btn{
+    background-position: -80px 0;
+    display: none;
+    right: 51px;
+    top: 9px;
+}
+
+.DOPBCPCalendar-navigation .dopbcp-next-btn{
+    background-position: -120px 0;
+    right: 9px;
+    top: 9px;
+}
+
+.DOPBCPCalendar-navigation .dopbcp-add-btn .dopbcp-info,
+.DOPBCPCalendar-navigation .dopbcp-next-btn .dopbcp-info,
+.DOPBCPCalendar-navigation .dopbcp-previous-btn .dopbcp-info,
+.DOPBCPCalendar-navigation .dopbcp-remove-btn .dopbcp-info{
+    background-color: #252525;
+    color: #ffffff;
+    display: none;
+    font-family: 'Open Sans' !important;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 20px;
+    max-width: 230px;
+    margin: 42px 0 0 0;
+    padding: 10px;
+    position: absolute;
+    white-space: nowrap;
+    z-index: 1000000;
+}
+
+.DOPBCPCalendar-navigation .dopbcp-next-btn .dopbcp-info,
+.DOPBCPCalendar-navigation .dopbcp-previous-btn .dopbcp-info{
+    right: 0;
+}
+
+.DOPBCPCalendar-navigation .dopbcp-add-btn:hover .dopbcp-info,
+.DOPBCPCalendar-navigation .dopbcp-next-btn:hover .dopbcp-info,
+.DOPBCPCalendar-navigation .dopbcp-previous-btn:hover .dopbcp-info,
+.DOPBCPCalendar-navigation .dopbcp-remove-btn:hover .dopbcp-info{
+    display: block;
+}
+
+.DOPBCPCalendar-navigation .dopbcp-month-year{
+    color: #464646;
+    font-family: 'Open Sans' !important;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 40px;
+    margin: 0;
+    padding: 9px 9px 10px 9px;
+    text-align: center;
+    z-index:0;
+}
+
+.DOPBCPCalendar-navigation .dopbcp-month-year.dopbcp-style-small{
+    padding: 59px 9px 10px 9px;
+    text-align: left;
+}
+
+.DOPBCPCalendar-navigation .dopbcp-week{
+    margin: 0;
+    overflow: hidden;
+    padding: 0 4px 9px 3px;
+}
+
+.DOPBCPCalendar-navigation .dopbcp-week .dopbcp-day{
+    color: #898989;
+    display: block;
+    font-family: 'Open Sans', sans-serif !important;
+    font-size: 12px;
+    line-height: 20px;
+    float: left;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+/*
+ * ***************************************************************************** End navigation.
+ */
+
+/*
+ * ***************************************************************************** Begin calendar.
+ */
+.DOPBCPCalendar-calendar{
+    margin: 0;
+    position: relative;
+    text-align: center;
+}
+
+.DOPBCPCalendar-month{
+    border: 1px solid #cccccc;
+    background: #eeeeee;
+    margin: 5px 0 0 0;
+    overflow: hidden;
+    padding: 9px 0 9px 5px;
+}
+
+.DOPBCPCalendar-month-year{
+    background-color: #eeeeee;
+    border: 1px solid #cccccc;
+    color: #464646;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 38px;
+    height: 38px;
+    margin: 20px 0 5px 0;
+    overflow: hidden;
+    padding: 0 0 0 9px;
+    text-align: left;
+}
+
+/*
+ * ***************************************************************** Begin days.
+ */
+.DOPBCPCalendar-day{
+    clear: none !important;
+    float: left;;
+    margin:  0 0 2px 0;
+    padding: 0;
+}
+
+.DOPBCPCalendar-day .dopbcp-bind-left, 
+.DOPBCPCalendar-day .dopbcp-bind-right{
+    float: left;
+    opacity: 0;
+    width: 1px;
+}
+
+.DOPBCPCalendar-day .dopbcp-bind-left.dopbcp-enabled,
+.DOPBCPCalendar-day .dopbcp-bind-left.dopbcp-extended,  
+.DOPBCPCalendar-day .dopbcp-bind-right.dopbcp-enabled,  
+.DOPBCPCalendar-day .dopbcp-bind-right.dopbcp-extended{
+    opacity: 1;
+}
+
+.DOPBCPCalendar-day .dopbcp-bind-left .dopbcp-head, 
+.DOPBCPCalendar-day .dopbcp-bind-right .dopbcp-head{
+    background-color: #cccccc !important; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your DEFAULT color. */
+    border: 1px solid #cccccc !important; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your DEFAULT color. */
+    border-left: none !important;
+    border-right: none !important;
+    height: 17px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 1px !important;
+}
+
+.DOPBCPCalendar-day.dopbcp-style-small .dopbcp-bind-left .dopbcp-head{
+    height: 31px;
+} 
+
+.DOPBCPCalendar-day .dopbcp-bind-left .dopbcp-body, 
+.DOPBCPCalendar-day .dopbcp-bind-right .dopbcp-body{
+    background-color: #ffffff !important;
+    border-bottom: 1px solid #cccccc !important; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your DEFAULT color. */
+    font-family: 'Open Sans', sans-serif !important;
+    font-size: 12px !important;
+    font-weight: 300 !important;
+    line-height: 19px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 1px !important;
+}
+
+.DOPBCPCalendar-day .dopbcp-bind-middle{
+    float: left;
+    overflow: hidden;
+}
+
+.DOPBCPCalendar-day .dopbcp-bind-middle .dopbcp-head{
+    background-color: #cccccc !important; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your DEFAULT color. */
+    border: 1px solid #cccccc !important; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your DEFAULT color. */
+    -webkit-box-sizing: content-box !important;
+    -moz-box-sizing: content-box !important;
+    box-sizing: content-box !important;
+    display: block !important;
+    height: 17px !important;
+    margin: 0 !important;
+    padding: 0 0 0 4px !important;
+    position: relative !important;
+    width: auto !important;
+}
+
+.DOPBCPCalendar-day.dopbcp-style-small .dopbcp-bind-middle .dopbcp-head{
+    height: 31px !important;
+} 
+
+.DOPBCPCalendar-day .dopbcp-bind-middle.dopbcp-group1 .dopbcp-head{
+    border-right: none !important;
+}
+
+.DOPBCPCalendar-day .dopbcp-bind-middle.dopbcp-group2 .dopbcp-head,
+.DOPBCPCalendar-day .dopbcp-bind-middle.dopbcp-group3.dopbcp-extended .dopbcp-head{
+    border-left: none !important;
+    border-right: none !important;
+}
+
+.DOPBCPCalendar-day .dopbcp-bind-middle.dopbcp-group0.dopbcp-extended .dopbcp-head,
+.DOPBCPCalendar-day .dopbcp-bind-middle.dopbcp-group1.dopbcp-extended .dopbcp-head,
+.DOPBCPCalendar-day .dopbcp-bind-middle.dopbcp-group3 .dopbcp-head{
+    border-left: none !important;
+}
+
+.DOPBCPCalendar-day .dopbcp-bind-middle .dopbcp-head .dopbcp-day{
+    color: #ffffff;
+    float: left;
+    font-family: 'Open Sans', sans-serif !important;
+    font-size: 12px !important;
+    font-weight: 300 !important;
+    line-height: 17px !important;
+    margin: 0;
+    padding: 0;
+    position: relative !important;
+}
+
+.DOPBCPCalendar-day .dopbcp-bind-middle .dopbcp-head .dopbcp-co{
+    background: #cccccc; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your DEFAULT color. */
+    border: 1px solid #cccccc; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your DEFAULT color. */
+    border-right: none;
+    -webkit-box-sizing: content-box !important;
+    -moz-box-sizing: content-box !important;
+    box-sizing: content-box !important;
+    height: 17px;
+    left: -1px;
+    margin: 0 !important;
+    padding: 0px 0px 0px 1px !important;
+    position: absolute !important;
+    top: -1px;
+    width: 50% !important;
+}
+
+.DOPBCPCalendar-day .dopbcp-bind-middle .dopbcp-head .dopbcp-ci{
+    background-color: #cccccc; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your DEFAULT color. */
+    border: 1px solid #cccccc; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your DEFAULT color. */
+    border-left: none;
+    -webkit-box-sizing: content-box !important;
+    -moz-box-sizing: content-box !important;
+    box-sizing: content-box !important;
+    height: 17px;
+    right: -1px;
+    margin: 0 !important;
+    position: absolute !important;
+    top: -1px;
+    width: 50% !important;
+}
+
+.DOPBCPCalendar-day.dopbcp-style-small .dopbcp-bind-middle .dopbcp-head .dopbcp-co,
+.DOPBCPCalendar-day.dopbcp-style-small .dopbcp-bind-middle .dopbcp-head .dopbcp-ci{
+    height: 31px !important;
+} 
+
+.DOPBCPCalendar-day .dopbcp-bind-middle.dopbcp-group2 .dopbcp-head .dopbcp-co{
+    border-left-color: transparent !important;
+}
+
+.DOPBCPCalendar-day .dopbcp-bind-middle.dopbcp-group3.dopbcp-extended .dopbcp-head .dopbcp-co{
+    border-left-color: transparent !important;
+}
+
+.DOPBCPCalendar-day .dopbcp-bind-middle.dopbcp-group0.dopbcp-extended .dopbcp-head .dopbcp-co,
+.DOPBCPCalendar-day .dopbcp-bind-middle.dopbcp-group1.dopbcp-extended .dopbcp-head .dopbcp-co,
+.DOPBCPCalendar-day .dopbcp-bind-middle.dopbcp-group1 .dopbcp-head .dopbcp-ci,
+.DOPBCPCalendar-day .dopbcp-bind-middle.dopbcp-group2 .dopbcp-head .dopbcp-ci{
+    border-right-color: transparent !important;
+}
+
+.DOPBCPCalendar-day .dopbcp-bind-middle .dopbcp-head .dopbcp-info{
+    background-color: transparent;
+    background-image: url('../images/sprite.png');
+    background-position: -161px -1px;
+    background-size: 320px 80px;
+    cursor: pointer;
+    float: right;
+    height: 17px;
+    margin: 0 0 0 1px;
+    position: relative;
+    width: 17px;
+    -webkit-transition: background-color 300ms linear;
+    -moz-transition: background-color 300ms linear;
+    -o-transition: background-color 300ms linear;
+    transition: background-color 300ms linear;
+}
+
+.DOPBCPCalendar-day .dopbcp-bind-middle .dopbcp-head .dopbcp-info:hover{
+    background-color: #464646;
+}
+
+.DOPBCPCalendar-day.dopbcp-style-small .dopbcp-bind-middle .dopbcp-head .dopbcp-info{
+    display: none !important;
+} 
+
+.DOPBCPCalendar-day .dopbcp-bind-middle .dopbcp-body{
+    background-color: #ffffff !important;
+    border: 1px solid #cccccc !important; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your DEFAULT color. */
+    border-top: none !important;
+    -webkit-box-sizing: content-box !important;
+    -moz-box-sizing: content-box !important;
+    box-sizing: content-box !important;
+    color: #222222 !important;
+    display: block;
+    float: none !important;
+    font-family: 'Open Sans', sans-serif !important;
+    font-size: 12px !important;
+    font-weight: 300 !important;
+    line-height: 19px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: relative !important;
+    text-align: left !important;
+    vertical-align: middle !important;
+    width: auto !important;
+}
+
+.DOPBCPCalendar-day .dopbcp-bind-middle .dopbcp-body .dopbcp-co{
+    background: transparent;
+    border: 1px solid #cccccc; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your DEFAULT color. */
+    border-right: none;
+    border-top: none;
+    -webkit-box-sizing: content-box !important;
+    -moz-box-sizing: content-box !important;
+    box-sizing: content-box !important;
+    left: -1px;
+    height: inherit !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: absolute !important;
+    top: 0;
+    width: 50% !important;
+}
+
+.DOPBCPCalendar-day .dopbcp-bind-middle .dopbcp-body .dopbcp-ci{
+    background: transparent;
+    border: 1px solid #cccccc; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your DEFAULT color. */
+    border-left: none;
+    border-top: none;
+    -webkit-box-sizing: content-box !important;
+    -moz-box-sizing: content-box !important;
+    box-sizing: content-box !important;
+    height: inherit !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: absolute !important;
+    right: -1px;
+    top: 0;
+    width: 50% !important;
+}
+
+.DOPBCPCalendar-day .dopbcp-bind-middle.dopbcp-group1 .dopbcp-body{
+    border-right-color: transparent !important;
+}
+
+.DOPBCPCalendar-day .dopbcp-bind-middle.dopbcp-group0.dopbcp-extended .dopbcp-body,
+.DOPBCPCalendar-day .dopbcp-bind-middle.dopbcp-group1.dopbcp-extended .dopbcp-body,
+.DOPBCPCalendar-day .dopbcp-bind-middle.dopbcp-group3 .dopbcp-body{
+    border-left-color: transparent !important;
+}
+
+.DOPBCPCalendar-day .dopbcp-bind-middle.dopbcp-group2 .dopbcp-body,
+.DOPBCPCalendar-day .dopbcp-bind-middle.dopbcp-group3.dopbcp-extended .dopbcp-body{
+    border-left-color: transparent !important;
+    border-right-color: transparent !important;
+}
+
+.DOPBCPCalendar-day .dopbcp-bind-middle.dopbcp-group0.dopbcp-extended .dopbcp-body .dopbcp-co,
+.DOPBCPCalendar-day .dopbcp-bind-middle.dopbcp-group1.dopbcp-extended .dopbcp-body .dopbcp-co,
+.DOPBCPCalendar-day .dopbcp-bind-middle.dopbcp-group2 .dopbcp-body .dopbcp-co,
+.DOPBCPCalendar-day .dopbcp-bind-middle.dopbcp-group3 .dopbcp-body .dopbcp-co{
+    border-left: none !important;
+}
+
+.DOPBCPCalendar-day .dopbcp-bind-middle.dopbcp-group1 .dopbcp-body .dopbcp-ci,
+.DOPBCPCalendar-day .dopbcp-bind-middle.dopbcp-group2 .dopbcp-body .dopbcp-ci,
+.DOPBCPCalendar-day .dopbcp-bind-middle.dopbcp-group3.dopbcp-extended .dopbcp-body .dopbcp-ci{
+    border-right-color: transparent !important;
+    border-right: transparent !important;
+}
+
+
+.DOPBCPCalendar-day .dopbcp-bind-middle .dopbcp-body .dopbcp-old-price{
+    color: #acacac;
+    float: left;
+    font-family: 'Open Sans', sans-serif !important;
+    font-size: 12px !important;
+    font-weight: 300;
+    line-height: 20px !important;
+    margin: 0 !important;
+    padding: 0 0 0 5px !important;
+    text-decoration: line-through;
+}
+
+.DOPBCPCalendar-day .dopbcp-bind-middle .dopbcp-body .dopbcp-price{
+    color: #464646;
+    float: left;
+    font-family: 'Open Sans', sans-serif !important;
+    font-size: 12px !important;
+    line-height: 20px !important;
+    margin: 0 !important;
+    padding: 0 0 0 5px !important;
+}
+
+.DOPBCPCalendar-day .dopbcp-bind-middle .dopbcp-body .dopbcp-available{
+    color: #acacac;
+    font-family: 'Open Sans', sans-serif !important;
+    font-size: 11px !important;
+    font-weight: 300;
+    line-height: 18px !important;
+    padding: 0 0 0 5px;
+    width: 100%;
+}
+
+.DOPBCPCalendar-day .dopbcp-bind-middle .dopbcp-body .dopbcp-info-body{
+    color: #acacac;
+    font-family: 'Open Sans', sans-serif !important;
+    font-size: 11px !important;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 20px !important;
+    height: 20px;
+    overflow: hidden;
+    padding: 0 0 0 5px;
+    width: auto;
+    word-break:break-all;
+}
+
+.DOPBCPCalendar-day .dopbcp-bind-middle .dopbcp-body .dopbcp-info-body .dopbcp-info-body-mask{
+    background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(255, 255, 255, 1)));
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+    background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+    background: -ms-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#ffffff', GradientType=1);
+    font-style: normal;
+    height: 20px;
+    padding: 0 2px 0 0;
+    position: absolute;
+    right: 0;
+    width: 70%;
+    text-align: right;
+    z-index: 100;
+}
+
+.DOPBCPCalendar-day.dopbcp-style-small .dopbcp-body{
+    display: none !important;
+}
+/*
+ * Last month day.
+ */
+.DOPBCPCalendar-day.dopbcp-last-month{
+    opacity: 0.5;
+}
+
+/* 
+ * Past day.
+ */
+.DOPBCPCalendar-day.dopbcp-past-day{
+    opacity: 0.25;
+}
+
+/*
+ * Current month day.
+ */
+.DOPBCPCalendar-day.dopbcp-curr-month{
+}
+
+/*
+ * Next month day.
+ */
+.DOPBCPCalendar-day.dopbcp-next-month{
+    opacity: 0.5;
+}
+
+/*
+ * Available day.
+ */
+.DOPBCPCalendar-day.dopbcp-available .dopbcp-head,
+.DOPBCPCalendar-day .dopbcp-head .dopbcp-co.dopbcp-available,
+.DOPBCPCalendar-day .dopbcp-head .dopbcp-ci.dopbcp-available,
+.DOPBCPCalendar-day .dopbcp-bind-left.dopbcp-extended.dopbcp-available .dopbcp-head{
+    background-color: #68ba68 !important; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your AVAILABLE color. */
+    border-color: #68ba68 !important; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your AVAILABLE color. */
+}
+
+.DOPBCPCalendar-day.dopbcp-available .dopbcp-body,
+.DOPBCPCalendar-day .dopbcp-body .dopbcp-co.dopbcp-available,
+.DOPBCPCalendar-day .dopbcp-body .dopbcp-ci.dopbcp-available,
+.DOPBCPCalendar-day .dopbcp-bind-left.dopbcp-extended.dopbcp-available .dopbcp-body{
+    border-color: #68ba68 !important; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your AVAILABLE color. */
+}
+
+.DOPBCPCalendar-day.dopbcp-available .dopbcp-head .dopbcp-day,
+.DOPBCPCalendar-day .dopbcp-head .dopbcp-co.dopbcp-available,
+.DOPBCPCalendar-day .dopbcp-head .dopbcp-ci.dopbcp-available,
+.DOPBCPCalendar-day .dopbcp-body .dopbcp-co.dopbcp-available,
+.DOPBCPCalendar-day .dopbcp-body .dopbcp-ci.dopbcp-available{
+    cursor: pointer;
+}
+
+/*
+ * Booked day.
+ */
+.DOPBCPCalendar-day.dopbcp-booked .dopbcp-head,
+.DOPBCPCalendar-day .dopbcp-head .dopbcp-co.dopbcp-booked,
+.DOPBCPCalendar-day .dopbcp-head .dopbcp-ci.dopbcp-booked{
+    background-color: #dd6464 !important; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your BOOKED color. */
+    border-color: #dd6464 !important; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your BOOKED color. */
+}
+
+.DOPBCPCalendar-day.dopbcp-booked .dopbcp-body,
+.DOPBCPCalendar-day .dopbcp-body .dopbcp-co.dopbcp-booked,
+.DOPBCPCalendar-day .dopbcp-body .dopbcp-ci.dopbcp-booked{
+    border-color: #dd6464 !important; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your BOOKED color. */
+}
+
+/*
+ * Special day.
+ */
+.DOPBCPCalendar-day.dopbcp-special .dopbcp-head,
+.DOPBCPCalendar-day .dopbcp-head .dopbcp-co.dopbcp-special,
+.DOPBCPCalendar-day .dopbcp-head .dopbcp-ci.dopbcp-special,
+.DOPBCPCalendar-day .dopbcp-bind-left.dopbcp-extended.dopbcp-special .dopbcp-head{
+    background-color: #ba68ba !important; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your SPECIAL color. */
+    border-color: #ba68ba !important; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your SPECIAL color. */
+}
+
+.DOPBCPCalendar-day.dopbcp-special .dopbcp-body,
+.DOPBCPCalendar-day .dopbcp-body .dopbcp-co.dopbcp-special,
+.DOPBCPCalendar-day .dopbcp-body .dopbcp-ci.dopbcp-special,
+.DOPBCPCalendar-day .dopbcp-bind-left.dopbcp-extended.dopbcp-special .dopbcp-body{
+    border-color: #ba68ba !important; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your SPECIAL color. */
+}
+
+.DOPBCPCalendar-day.dopbcp-special .dopbcp-head .dopbcp-day,
+.DOPBCPCalendar-day .dopbcp-head .dopbcp-co.dopbcp-special,
+.DOPBCPCalendar-day .dopbcp-head .dopbcp-ci.dopbcp-special,
+.DOPBCPCalendar-day .dopbcp-body .dopbcp-co.dopbcp-special,
+.DOPBCPCalendar-day .dopbcp-body .dopbcp-ci.dopbcp-special{
+    cursor: pointer;
+}
+
+/*
+ * Unavailable day.
+ */
+.DOPBCPCalendar-day.dopbcp-unavailable .dopbcp-head,
+.DOPBCPCalendar-day .dopbcp-head .dopbcp-co.dopbcp-unavailable,
+.DOPBCPCalendar-day .dopbcp-head .dopbcp-ci.dopbcp-unavailable{
+    background-color: #cccccc !important; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your UNAVAILABLE color. */
+    border-color: #cccccc !important; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your UNAVAILABLE color. */
+}
+
+.DOPBCPCalendar-day.dopbcp-unavailable .dopbcp-body,
+.DOPBCPCalendar-day .dopbcp-body .dopbcp-co.dopbcp-unavailable,
+.DOPBCPCalendar-day .dopbcp-body .dopbcp-ci.dopbcp-unavailable{
+    border-color: #cccccc !important; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your UNAVAILABLE color. */
+}
+
+/*
+ * Selected day.
+ */
+.DOPBCPCalendar-day.dopbcp-selected .dopbcp-head,
+.DOPBCPCalendar-day.dopbcp-selected .dopbcp-head .dopbcp-co,
+.DOPBCPCalendar-day.dopbcp-selected .dopbcp-head .dopbcp-ci,
+.DOPBCPCalendar-day.dopbcp-selected .dopbcp-bind-left.dopbcp-extended .dopbcp-head{
+    background-color: #464646 !important; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your SELECTED color. */
+    border-color: #464646 !important; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your SELECTED color. */
+}
+
+.DOPBCPCalendar-day.dopbcp-selected .dopbcp-body,
+.DOPBCPCalendar-day.dopbcp-selected .dopbcp-body .dopbcp-co,
+.DOPBCPCalendar-day.dopbcp-selected .dopbcp-body .dopbcp-ci,
+.DOPBCPCalendar-day.dopbcp-selected .dopbcp-bind-left.dopbcp-extended .dopbcp-body{
+    border-color: #464646 !important; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your SELECTED color. */
+}
+
+.DOPBCPCalendar-day.dopbcp-selected.dopbcp-first .dopbcp-head .dopbcp-co.dopbcp-none,
+.DOPBCPCalendar-day.dopbcp-selected.dopbcp-last .dopbcp-head .dopbcp-ci.dopbcp-none{
+    background-color: #cccccc !important; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your DEFAULT color. */
+    border-color: #cccccc !important; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your DEFAULT color. */
+}
+
+.DOPBCPCalendar-day.dopbcp-selected.dopbcp-first .dopbcp-body .dopbcp-co.dopbcp-none,
+.DOPBCPCalendar-day.dopbcp-selected.dopbcp-last .dopbcp-body .dopbcp-ci.dopbcp-none{
+    border-color: #cccccc !important; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your DEFAULT color. */
+}
+
+.DOPBCPCalendar-day.dopbcp-selected.dopbcp-first .dopbcp-head .dopbcp-co.dopbcp-available,
+.DOPBCPCalendar-day.dopbcp-selected.dopbcp-last .dopbcp-head .dopbcp-ci.dopbcp-available,
+.DOPBCPCalendar-day.dopbcp-selected.dopbcp-first .dopbcp-bind-left.dopbcp-available.dopbcp-extended .dopbcp-head,
+.DOPBCPCalendar-day.dopbcp-available.dopbcp-selected.dopbcp-last .dopbcp-bind-right .dopbcp-head{
+    background-color: #68ba68 !important; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your AVAILABLE color. */
+    border-color: #68ba68 !important; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your AVAILABLE color. */
+}
+
+.DOPBCPCalendar-day.dopbcp-selected.dopbcp-first .dopbcp-body .dopbcp-co.dopbcp-available,
+.DOPBCPCalendar-day.dopbcp-selected.dopbcp-last .dopbcp-body .dopbcp-ci.dopbcp-available,
+.DOPBCPCalendar-day.dopbcp-selected.dopbcp-first .dopbcp-bind-left.dopbcp-available.dopbcp-extended .dopbcp-body,
+.DOPBCPCalendar-day.dopbcp-available.dopbcp-selected.dopbcp-last .dopbcp-bind-right .dopbcp-body{
+    border-color: #68ba68 !important; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your AVAILABLE color. */
+}
+
+.DOPBCPCalendar-day.dopbcp-selected.dopbcp-first .dopbcp-head .dopbcp-co.dopbcp-booked,
+.DOPBCPCalendar-day.dopbcp-selected.dopbcp-last .dopbcp-head .dopbcp-ci.dopbcp-booked{
+    background-color: #dd6464 !important; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your BOOKED color. */
+    border-color: #dd6464 !important; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your BOOKED color. */
+}
+
+.DOPBCPCalendar-day.dopbcp-selected.dopbcp-first .dopbcp-body .dopbcp-co.dopbcp-booked,
+.DOPBCPCalendar-day.dopbcp-selected.dopbcp-last .dopbcp-body .dopbcp-ci.dopbcp-booked{
+    border-color: #dd6464 !important; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your BOOKED color. */
+}
+
+.DOPBCPCalendar-day.dopbcp-selected.dopbcp-first .dopbcp-head .dopbcp-co.dopbcp-special,
+.DOPBCPCalendar-day.dopbcp-selected.dopbcp-last .dopbcp-head .dopbcp-ci.dopbcp-special,
+.DOPBCPCalendar-day.dopbcp-selected.dopbcp-first .dopbcp-bind-left.dopbcp-special.dopbcp-extended .dopbcp-head,
+.DOPBCPCalendar-day.dopbcp-special.dopbcp-selected.dopbcp-last .dopbcp-bind-right .dopbcp-head{
+    background-color: #ba68ba !important; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your SPECIAL color. */
+    border-color: #ba68ba !important; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your SPECIAL color. */
+}
+
+.DOPBCPCalendar-day.dopbcp-selected.dopbcp-first .dopbcp-body .dopbcp-co.dopbcp-special,
+.DOPBCPCalendar-day.dopbcp-selected.dopbcp-last .dopbcp-body .dopbcp-ci.dopbcp-special,
+.DOPBCPCalendar-day.dopbcp-selected.dopbcp-first .dopbcp-bind-left.dopbcp-special.dopbcp-extended .dopbcp-body,
+.DOPBCPCalendar-day.dopbcp-special.dopbcp-selected.dopbcp-last .dopbcp-bind-right .dopbcp-body{
+    border-color: #ba68ba !important; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your SPECIAL color. */
+}
+
+.DOPBCPCalendar-day.dopbcp-selected.dopbcp-first .dopbcp-head .dopbcp-co.dopbcp-unavailable,
+.DOPBCPCalendar-day.dopbcp-selected.dopbcp-last .dopbcp-head .dopbcp-ci.dopbcp-unavailable{
+    background-color: #cccccc !important; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your UNAVAILABLE color. */
+    border-color: #cccccc !important; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your UNAVAILABLE color. */
+}
+
+.DOPBCPCalendar-day.dopbcp-selected.dopbcp-first .dopbcp-body .dopbcp-co.dopbcp-unavailable,
+.DOPBCPCalendar-day.dopbcp-selected.dopbcp-last .dopbcp-body .dopbcp-ci.dopbcp-unavailable{
+    border-color: #cccccc !important; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your UNAVAILABLE color. */
+}
+
+.DOPBCPCalendar-day.dopbcp-selected.dopbcp-first .dopbcp-extended .dopbcp-body .dopbcp-co{
+    border-left-color: transparent !important;
+}
+
+/*
+ * Mask day.
+ */
+.DOPBCPCalendar-day.dopbcp-mask{
+    cursor: default;
+    opacity: 0;
+}
+
+/*
+ * Hide day.
+ */
+.DOPBCPCalendar-day.dopbcp-hide{
+    display: none;
+}
+
+/*
+ * Cursor.
+ */
+.DOPBCPCalendar-day.dopbcp-cursor-pointer{
+    cursor: pointer !important;
+}
+
+.DOPBCPCalendar-day.dopbcp-no-cursor-pointer
+.DOPBCPCalendar-day.dopbcp-no-cursor-pointer .dopbcp-head .dopbcp-co,
+.DOPBCPCalendar-day.dopbcp-no-cursor-pointer .dopbcp-head .dopbcp-ci,
+.DOPBCPCalendar-day.dopbcp-no-cursor-pointer .dopbcp-body .dopbcp-co,
+.DOPBCPCalendar-day.dopbcp-no-cursor-pointer .dopbcp-body .dopbcp-ci{
+    cursor: default !important;
+}
+
+/*
+ * Grouped days - first column.
+ */
+.DOPBCPCalendar-day.dopbcp-first-column .dopbcp-bind-left{
+    opacity: 0 !important;
+}
+
+/*
+ * Grouped days - last column.
+ */
+.DOPBCPCalendar-day.dopbcp-last-column .dopbcp-bind-middle.dopbcp-group1 .dopbcp-head .dopbcp-ci,
+.DOPBCPCalendar-day.dopbcp-last-column .dopbcp-bind-middle.dopbcp-group2 .dopbcp-head .dopbcp-ci{
+    right: 0px !important;
+}
+
+.DOPBCPCalendar-day.dopbcp-last-column .dopbcp-bind-right{
+    opacity: 0 !important;
+}
+/*
+ * ******************************************************************* End days.
+ */ 
+
+/*
+ * **************************************************************** Begin hours.
+ */ 
+.DOPBCPCalendar-hours{
+    background-color: #eeeeee;
+    border: 1px solid #cccccc;
+    border-top: none;
+    display: none;
+    padding: 5px 5px 4px 5px;
+}
+
+.DOPBCPCalendar-hour{
+    cursor: pointer;
+    display: block;
+    margin: 0;
+    text-align: left;
+}
+
+.DOPBCPCalendar-hour .dopbcp-bind-top, 
+.DOPBCPCalendar-hour .dopbcp-bind-bottom{
+    background-color: #ffffff;
+    border: 1px solid #cccccc; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your DEFAULT color. */
+    border-bottom: none;
+    border-top: none;
+    height: 1px;
+    opacity: 0;
+}
+
+.DOPBCPCalendar-hour .dopbcp-bind-top .dopbcp-hour, 
+.DOPBCPCalendar-hour .dopbcp-bind-bottom .dopbcp-hour{
+    background: #ffffff;
+    color: #ffffff;
+    float: left;
+    line-height: 1px !important;
+    padding: 0 5px;
+}
+
+.DOPBCPCalendar-hour .dopbcp-bind-top.dopbcp-enabled, 
+.DOPBCPCalendar-hour .dopbcp-bind-bottom.dopbcp-enabled{
+    opacity: 1;
+}
+
+.DOPBCPCalendar-hour .dopbcp-bind-top.dopbcp-enabled .dopbcp-hour, 
+.DOPBCPCalendar-hour .dopbcp-bind-bottom.dopbcp-enabled .dopbcp-hour{
+    background-color: #cccccc; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your DEFAULT color. */
+    color: #cccccc; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your DEFAULT color. */
+}
+
+.DOPBCPCalendar-hour .dopbcp-bind-middle{    
+    background-color: #ffffff;
+    border: 1px solid #cccccc; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your DEFAULT color. */
+    height: 16px;
+    line-height: 16px;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+}
+
+.DOPBCPCalendar-hour .dopbcp-bind-middle.dopbcp-group1{
+    border-bottom: none;
+}
+
+.DOPBCPCalendar-hour .dopbcp-bind-middle.dopbcp-group2{
+    border-bottom: none;
+    border-top: none;
+}
+
+.DOPBCPCalendar-hour .dopbcp-bind-middle.dopbcp-group3{
+    border-top: none;
+}
+
+.DOPBCPCalendar-hour .dopbcp-bind-middle .dopbcp-hour{    
+    background-color: #cccccc; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your DEFAULT color. */
+    color: #ffffff;
+    float: left;
+    font-family: 'Open Sans', sans-serif !important;
+    font-size: 12px !important;
+    font-weight: 300 !important;
+    line-height: 16px !important;
+    padding: 0 5px 0 4px;
+}
+
+.DOPBCPCalendar-hour .dopbcp-bind-middle .dopbcp-price, 
+.DOPBCPCalendar-hour .dopbcp-bind-middle .dopbcp-price-promo{
+    color: #464646;
+    float: left;
+    font-family: 'Open Sans', sans-serif !important;
+    font-size: 12px !important;
+    line-height: 16px !important;
+    padding: 0 0 0 10px !important;
+}
+
+.DOPBCPCalendar-hour .dopbcp-bind-middle .dopbcp-old-price{
+    color: #acacac;
+    float: left;
+    font-family: 'Open Sans', sans-serif !important;
+    font-size: 12px !important;
+    line-height: 16px !important;
+    padding: 0 0 0 5px !important;
+    text-decoration: line-through;
+}
+
+.DOPBCPCalendar-hour .dopbcp-bind-middle .dopbcp-available{
+    color: #acacac;
+    float: left;
+    font-family: 'Open Sans', sans-serif !important;
+    font-size: 11px !important;
+    line-height: 16px !important;
+    padding: 0 10px !important;
+}
+
+.DOPBCPCalendar-hour .dopbcp-bind-middle .dopbcp-info-body{
+    color: #acacac;
+    float: left;
+    font-family: 'Open Sans', sans-serif !important;
+    font-size: 11px !important;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 16px !important;
+    height: 16px;
+    overflow: hidden;
+    padding: 0 0 0 5px;
+    width: 60px;
+    word-break: break-all;
+}
+
+.DOPBCPCalendar-hour .dopbcp-bind-middle .dopbcp-info-body .dopbcp-info-body-mask{
+    background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(255, 255, 255, 1)));
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+    background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+    background: -ms-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#ffffff', GradientType=1);
+    float: right;
+    font-style: normal;
+    height: 16px;
+    padding: 0 2px 0 0;
+    width: 10px;
+    text-align: right;
+    z-index: 100;
+}
+
+.DOPBCPCalendar-hour .dopbcp-bind-middle .dopbcp-info{
+    background-color: #cccccc;
+    background-image: url('../images/sprite.png');
+    background-position: -162px -2px;
+    background-size: 320px 80px;
+    float: right;
+    height: 16px;
+    margin: 0;
+    width: 16px;
+    -webkit-transition: background-color 300ms linear;
+    -moz-transition: background-color 300ms linear;
+    -o-transition: background-color 300ms linear;
+    transition: background-color 300ms linear;
+}
+
+.DOPBCPCalendar-hour .dopbcp-bind-middle .dopbcp-info:hover{
+    background-color: #464646 !important;
+}
+
+/*
+ * Available hour.
+ */
+.DOPBCPCalendar-hour.dopbcp-available .dopbcp-hour,
+.DOPBCPCalendar-hour.dopbcp-available .dopbcp-bind-middle .dopbcp-info,
+.DOPBCPCalendar-hour.dopbcp-available .dopbcp-bind-middle .dopbcp-notes{    
+    background-color: #68ba68; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your AVAILABLE color. */
+}
+
+.DOPBCPCalendar-hour.dopbcp-available .dopbcp-bind-middle{    
+    border-color: #68ba68; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your AVAILABLE color. */
+}
+
+.DOPBCPCalendar-hour.dopbcp-available .dopbcp-bind-top{    
+    border-color: #68ba68; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your AVAILABLE color. */
+}
+
+.DOPBCPCalendar-hour.dopbcp-available .dopbcp-bind-top .dopbcp-hour{    
+    color: #68ba68; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your AVAILABLE color. */
+}
+
+.DOPBCPCalendar-hour.dopbcp-available .dopbcp-bind-bottom{    
+    border-color: #68ba68; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your AVAILABLE color. */
+}
+
+.DOPBCPCalendar-hour.dopbcp-available .dopbcp-bind-bottom .dopbcp-hour{    
+    color: #68ba68; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your AVAILABLE color. */
+}
+
+.DOPBCPCalendar-hour.dopbcp-available .dopbcp-bind-top.dopbcp-enabled .dopbcp-hour,
+.DOPBCPCalendar-hour.dopbcp-available .dopbcp-bind-bottom.dopbcp-enabled .dopbcp-hour{
+    background-color: #68ba68; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your AVAILABLE color. */
+    color: #68ba68; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your AVAILABLE color. */
+}
+
+/*
+ * Booked hour.
+ */
+.DOPBCPCalendar-hour.dopbcp-booked .dopbcp-hour,
+.DOPBCPCalendar-hour.dopbcp-booked .dopbcp-bind-middle .dopbcp-info,
+.DOPBCPCalendar-hour.dopbcp-booked .dopbcp-bind-middle .dopbcp-notes{    
+    background-color: #dd6464; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your BOOKED color. */
+}
+
+.DOPBCPCalendar-hour.dopbcp-booked .dopbcp-bind-middle{    
+    border-color: #dd6464; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your BOOKED color. */
+}
+
+.DOPBCPCalendar-hour.dopbcp-booked .dopbcp-bind-top{    
+    border-color: #dd6464; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your BOOKED color. */
+}
+
+.DOPBCPCalendar-hour.dopbcp-booked .dopbcp-bind-top .dopbcp-hour{    
+    color: #dd6464; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your BOOKED color. */
+}
+
+.DOPBCPCalendar-hour.dopbcp-booked .dopbcp-bind-bottom{    
+    border-color: #dd6464; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your BOOKED color. */
+}
+
+.DOPBCPCalendar-hour.dopbcp-booked .dopbcp-bind-bottom .dopbcp-hour{    
+    color: #dd6464; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your BOOKED color. */
+}
+
+.DOPBCPCalendar-hour.dopbcp-booked .dopbcp-bind-top.dopbcp-enabled .dopbcp-hour,
+.DOPBCPCalendar-hour.dopbcp-booked .dopbcp-bind-bottom.dopbcp-enabled .dopbcp-hour{
+    background-color: #dd6464; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your BOOKED color. */
+    color: #dd6464; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your BOOKED color. */
+}
+
+/*
+ * Special hour.
+ */
+.DOPBCPCalendar-hour.dopbcp-special .dopbcp-hour,
+.DOPBCPCalendar-hour.dopbcp-special .dopbcp-bind-middle .dopbcp-info,
+.DOPBCPCalendar-hour.dopbcp-special .dopbcp-bind-middle .dopbcp-notes{    
+    background-color: #ba68ba; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your SPECIAL color. */
+}
+
+.DOPBCPCalendar-hour.dopbcp-special .dopbcp-bind-middle{    
+    border-color: #ba68ba; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your SPECIAL color. */
+}
+
+.DOPBCPCalendar-hour.dopbcp-special .dopbcp-bind-top{    
+    border-color: #ba68ba; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your SPECIAL color. */
+}
+
+.DOPBCPCalendar-hour.dopbcp-special .dopbcp-bind-top .dopbcp-hour{    
+    color: #ba68ba; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your SPECIAL color. */
+}
+
+.DOPBCPCalendar-hour.dopbcp-special .dopbcp-bind-bottom{    
+    border-color: #ba68ba; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your SPECIAL color. */
+}
+
+.DOPBCPCalendar-hour.dopbcp-special .dopbcp-bind-bottom .dopbcp-hour{    
+    color: #ba68ba; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your SPECIAL color. */
+}
+
+.DOPBCPCalendar-hour.dopbcp-special .dopbcp-bind-top.dopbcp-enabled .dopbcp-hour,
+.DOPBCPCalendar-hour.dopbcp-special .dopbcp-bind-bottom.dopbcp-enabled .dopbcp-hour{
+    background-color: #ba68ba; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your SPECIAL color. */
+    color: #ba68ba; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your SPECIAL color. */
+}
+
+/*
+ * Unavailable hour.
+ */
+.DOPBCPCalendar-hour.dopbcp-unavailable .dopbcp-hour,
+.DOPBCPCalendar-hour.dopbcp-unavailable .dopbcp-bind-middle .dopbcp-info,
+.DOPBCPCalendar-hour.dopbcp-unavailable .dopbcp-bind-middle .dopbcp-notes{
+    background-color: #cccccc; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your UNAVAILABLE color. */
+}
+
+.DOPBCPCalendar-hour.dopbcp-unavailable .dopbcp-bind-middle{    
+    border-color: #cccccc; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your UNAVAILABLE color. */
+}
+
+.DOPBCPCalendar-hour.dopbcp-unavailable .dopbcp-bind-top{    
+    border-color: #cccccc; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your UNAVAILABLE color. */
+}
+
+.DOPBCPCalendar-hour.dopbcp-unavailable .dopbcp-bind-top .dopbcp-hour{    
+    color: #cccccc; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your UNAVAILABLE color. */
+}
+
+.DOPBCPCalendar-hour.dopbcp-unavailable .dopbcp-bind-bottom{    
+    border-color: #cccccc; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your UNAVAILABLE color. */
+}
+
+.DOPBCPCalendar-hour.dopbcp-unavailable .dopbcp-bind-bottom .dopbcp-hour{    
+    color: #cccccc; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your UNAVAILABLE color. */
+}
+
+.DOPBCPCalendar-hour.dopbcp-unavailable .dopbcp-bind-top.dopbcp-enabled .dopbcp-hour,
+.DOPBCPCalendar-hour.dopbcp-unavailable .dopbcp-bind-bottom.dopbcp-enabled .dopbcp-hour{
+    background-color: #cccccc; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your UNAVAILABLE color. */
+    color: #cccccc; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your UNAVAILABLE color. */
+}
+
+/*
+ * Selected hour.
+ */
+.DOPBCPCalendar-hour.dopbcp-selected .dopbcp-bind-middle{    
+    border-color: #464646; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your SELECTED color. */
+}
+
+.DOPBCPCalendar-hour.dopbcp-selected .dopbcp-bind-middle .dopbcp-hour{    
+    background: #464646; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your SELECTED color. */
+}
+
+.DOPBCPCalendar-hour.dopbcp-selected .dopbcp-bind-top{    
+    border-color: #464646; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your SELECTED color. */
+}
+
+.DOPBCPCalendar-hour.dopbcp-selected .dopbcp-bind-top .dopbcp-hour{    
+    color: #464646; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your SELECTED color. */
+}
+
+.DOPBCPCalendar-hour.dopbcp-selected .dopbcp-bind-bottom{    
+    border-color: #464646; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your SELECTED color. */
+}
+
+.DOPBCPCalendar-hour.dopbcp-selected .dopbcp-bind-bottom .dopbcp-hour{    
+    color: #464646; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your SELECTED color. */
+}
+
+.DOPBCPCalendar-hour.dopbcp-selected .dopbcp-bind-top .dopbcp-hour,
+.DOPBCPCalendar-hour.dopbcp-selected .dopbcp-bind-bottom .dopbcp-hour,
+.DOPBCPCalendar-hour.dopbcp-selected .dopbcp-bind-top.dopbcp-enabled .dopbcp-hour,
+.DOPBCPCalendar-hour.dopbcp-selected .dopbcp-bind-bottom.dopbcp-enabled .dopbcp-hour{ 
+    background-color: #464646; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your SELECTED color. */
+    color: #464646; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your SELECTED color. */
+}
+
+.DOPBCPCalendar-hour.dopbcp-selected .dopbcp-bind-middle .dopbcp-info{
+    background-color: #464646; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your SELECTED color. */
+}
+
+/*
+ * Past hour.
+ */
+.DOPBCPCalendar-hour.dopbcp-past-hour{  
+    cursor: default;
+    opacity: 0.25;
+}
+
+.DOPBCPCalendar-hour.dopbcp-past-hour .dopbcp-bind-middle .dopbcp-notes{
+    display: none;
+}
+
+.DOPBCPCalendar-hour.dopbcp-past-hour .dopbcp-bind-middle .dopbcp-info{
+    display: none;
+}
+/*
+ * ****************************************************************** End hours.
+ */
+/*
+ * ***************************************************************************** End calendar.
+ */
+
+/*
+ * ***************************************************************************** Begin sidebar.
+ */
+.DOPBCPCalendar-sidebar{
+    font-family: 'Open Sans', sans-serif !important;
+    overflow: hidden;
+    padding: 0;
+}
+
+.DOPBCPCalendar-sidebar.dopbcp-hidden{
+    margin: 0 !important;
+    width: 0 !important;
+}
+
+.DOPBCPCalendar-sidebar .dopbcp-sidebar-content{
+    border-collapse: collapse;
+    border: none !important;
+    border-spacing: 0;
+    margin: 0 !important;
+    padding: 0 !important;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.DOPBCPCalendar-sidebar .dopbcp-sidebar-content .dopbcp-column-separator-style{
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 20px;
+}
+
+.DOPBCPCalendar-sidebar .dopbcp-sidebar-content td{
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    vertical-align: top !important;
+}
+
+/*
+ * ******************************************************* Begin sidebar styles.
+ */
+/*
+ * Style 1
+ */
+.DOPBCPCalendar-sidebar.dopbcp-style1{
+    float: right;
+    margin: 0 0 0 20px;
+    width: 500px;
+}
+
+.DOPBCPCalendar-sidebar.dopbcp-style1-medium{
+    padding: 20px 0 0 0;
+    width: 100%;
+}
+
+.DOPBCPCalendar-sidebar.dopbcp-style1 .dopbcp-column2,
+.DOPBCPCalendar-sidebar.dopbcp-style1 .dopbcp-column3,
+
+.DOPBCPCalendar-sidebar.dopbcp-style1-medium .dopbcp-column2,
+.DOPBCPCalendar-sidebar.dopbcp-style1-medium .dopbcp-column3{
+    display: none;
+}
+
+/*
+ * Style 2
+ */
+.DOPBCPCalendar-sidebar.dopbcp-style2,
+.DOPBCPCalendar-sidebar.dopbcp-style2-medium{
+    padding: 20px 0 0 0;
+    width: 100%;
+}
+
+.DOPBCPCalendar-sidebar.dopbcp-style2 col.dopbcp-column1{
+    width: 33%;
+}
+
+.DOPBCPCalendar-sidebar.dopbcp-style2 .dopbcp-column4,
+.DOPBCPCalendar-sidebar.dopbcp-style2 .dopbcp-column5,
+.DOPBCPCalendar-sidebar.dopbcp-style2 .dopbcp-column6,
+
+.DOPBCPCalendar-sidebar.dopbcp-style2-medium .dopbcp-column4,
+.DOPBCPCalendar-sidebar.dopbcp-style2-medium .dopbcp-column5,
+.DOPBCPCalendar-sidebar.dopbcp-style2-medium .dopbcp-column6{
+    display: block;
+    width: auto;
+}
+
+.DOPBCPCalendar-sidebar.dopbcp-style2-medium .dopbcp-column7,
+.DOPBCPCalendar-sidebar.dopbcp-style2-medium .dopbcp-column8,
+.DOPBCPCalendar-sidebar.dopbcp-style2-medium .dopbcp-column9{
+    display: block;
+}
+
+/*
+ * Style 3
+ */
+.DOPBCPCalendar-sidebar.dopbcp-style3,
+.DOPBCPCalendar-sidebar.dopbcp-style3-medium{
+    padding: 20px 0 0 0;
+    width: 100%;
+}
+
+.DOPBCPCalendar-sidebar.dopbcp-style3-medium .dopbcp-column4,
+.DOPBCPCalendar-sidebar.dopbcp-style3-medium .dopbcp-column5,
+.DOPBCPCalendar-sidebar.dopbcp-style3-medium .dopbcp-column6,
+.DOPBCPCalendar-sidebar.dopbcp-style3-medium .dopbcp-column7,
+.DOPBCPCalendar-sidebar.dopbcp-style3-medium .dopbcp-column8,
+.DOPBCPCalendar-sidebar.dopbcp-style3-medium .dopbcp-column9{
+    display: block;
+}
+
+/*
+ * Style 4
+ */
+.DOPBCPCalendar-sidebar.dopbcp-style4{
+    float: right;
+    margin: 0 0 0 20px;
+    width: 240px;
+}
+
+.DOPBCPCalendar-sidebar.dopbcp-style4-medium{
+    padding: 20px 0 0 0;
+    width: 100%;
+}
+
+.DOPBCPCalendar-sidebar.dopbcp-style4 .dopbcp-column2,
+.DOPBCPCalendar-sidebar.dopbcp-style4 .dopbcp-column3,
+.DOPBCPCalendar-sidebar.dopbcp-style4 .dopbcp-column5,
+.DOPBCPCalendar-sidebar.dopbcp-style4 .dopbcp-column6,
+
+.DOPBCPCalendar-sidebar.dopbcp-style4-medium .dopbcp-column2,
+.DOPBCPCalendar-sidebar.dopbcp-style4-medium .dopbcp-column3,
+.DOPBCPCalendar-sidebar.dopbcp-style4-medium .dopbcp-column5,
+.DOPBCPCalendar-sidebar.dopbcp-style4-medium .dopbcp-column6{
+    display: none;
+}
+
+/*
+ * Style 5
+ */
+.DOPBCPCalendar-sidebar.dopbcp-style5{
+    float: right;
+    margin: 0 0 0 20px;
+}
+
+.DOPBCPCalendar-sidebar.dopbcp-style5-medium{
+    padding: 20px 0 0 0;
+    width: 100%;
+}
+
+.DOPBCPCalendar-sidebar.dopbcp-style5 .dopbcp-column2,
+.DOPBCPCalendar-sidebar.dopbcp-style5 .dopbcp-column3,
+.DOPBCPCalendar-sidebar.dopbcp-style5 .dopbcp-column5,
+.DOPBCPCalendar-sidebar.dopbcp-style5 .dopbcp-column6,
+
+.DOPBCPCalendar-sidebar.dopbcp-style5-medium .dopbcp-column2,
+.DOPBCPCalendar-sidebar.dopbcp-style5-medium .dopbcp-column3,
+.DOPBCPCalendar-sidebar.dopbcp-style5-medium .dopbcp-column5,
+.DOPBCPCalendar-sidebar.dopbcp-style5-medium .dopbcp-column6{
+    display: none;
+}
+
+/*
+ * Style mobile.
+ */
+.DOPBCPCalendar-sidebar.dopbcp-style-small{
+    padding: 10px 0 0 0;
+    width: 100%;
+}
+
+.DOPBCPCalendar-sidebar.dopbcp-style-small td{
+    display: block;
+}
+
+.DOPBCPCalendar-sidebar.dopbcp-style-small .dopbcp-column-separator-style,
+.DOPBCPCalendar-sidebar.dopbcp-style-small col:last-child{
+    display: none;
+}
+/*
+ * ********************************************************* End sidebar styles.
+ */
+
+.DOPBCPCalendar-sidebar .dopbcp-module{
+    background: #fcfcfc;
+    border: 1px solid #cccccc !important;
+    margin: 0 0 20px 0;
+    padding: 8px 9px 0 9px;
+    min-width: 220px;
+}
+
+.DOPBCPCalendar-sidebar.dopbcp-style-small .dopbcp-module{
+    margin: 0 0 10px 0;
+}
+
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-input-wrapper{
+    margin: 0 0 10px 0;
+    /*overflow: hidden;*/
+}
+
+.DOPBCPCalendar-sidebar .dopbcp-calendar-order{
+    border:0px !important;
+    padding:0px;
+}
+
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-input-wrapper.DOPBCPCalendar-left:first-child{
+    margin: 0 10px 10px 0;
+}
+
+.DOPBCPCalendar-sidebar .dopbcp-module h4{
+    color: #464646 !important;
+    display: block !important;
+    font-family: 'Open Sans', sans-serif !important;
+    font-size: 18px !important;
+    font-weight: normal !important;
+    line-height: 20px !important;
+    margin: 0 !important;
+    padding: 10px 0 20px !important;
+}
+
+/*
+ * Begin warning info.
+ */
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-input-wrapper .dopbcp-warning-info{
+    float: left;
+    margin: 1px 5px 0 0;
+    z-index: 10000;
+}
+
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-input-wrapper .dopbcp-warning-info .dopbcp-icon{
+    background-color: #f1705c;
+    background-image: url('../images/sprite.png');
+    background-position: -181px -1px;
+    background-size: 320px 80px;
+    float: right;
+    height: 18px;
+    margin: 0;
+    width: 18px;
+}
+
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-input-wrapper .dopbcp-warning-info .dopbcp-message{
+    background-color: #f1705c;
+    color: #ffffff;
+    display: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 20px;
+    margin: 19px 0 0 0;
+    padding: 5px 10px;
+    position: absolute;
+    width: 200px;
+}
+
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-input-wrapper .dopbcp-warning-info:hover .dopbcp-message{
+    display: block;
+}
+
+/*
+ * End warning info.
+ */
+
+/*
+ * Begin label.
+ */
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-input-wrapper label{
+    color: #666666;
+    display: block;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 20px;
+    margin: 0;
+}
+
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-input-wrapper label.dopbcp-for-checkbox,
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-input-wrapper label.dopbcp-for-radio{
+    margin: 0;
+    padding: 0 0 0 23px;
+    width: auto;
+}
+
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-input-wrapper label.dopbcp-for-radio{
+    color: #666666 !important;
+    cursor: default;
+}
+
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-input-wrapper label .dopbcp-required{
+    color: #f1705c;
+}
+
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-input-wrapper label,
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-input-wrapper label a{
+    color: #666666;
+    text-decoration: none !important;
+    -webkit-transition: color 300ms linear;
+    -moz-transition: color 300ms linear;
+    -o-transition: color 300ms linear;
+    transition: color 300ms linear;
+}
+
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-input-wrapper label:hover,
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-input-wrapper label a:hover{
+    color: #ff6300;
+}
+/*
+ * End label.
+ */
+
+/*
+ * Begin text.
+ */
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-input-wrapper input[type=text]{
+    -webkit-appearance: none;
+    background: #ffffff;
+    border: 1px solid #c9c9c9;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    color: #666666;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 20px;
+    margin: 0;
+    outline: none;
+    padding: 4px 9px;
+    width: 200px;
+}
+
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-input-wrapper input[type=text]:focus{
+    border: 1px solid #c9c9c9;
+}
+
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-input-wrapper input[type=text]:disabled{
+    opacity: 0.5;
+}
+
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-input-wrapper input[type=text].DOPBCPCalendar-check-in-view,
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-input-wrapper input[type=text].DOPBCPCalendar-check-out-view{
+    background: #ffffff url('../images/sprite.png') -5px -47px;
+    background-size: 320px 80px;
+    padding: 4px 9px 4px 34px;
+    width: 175px;
+}
+/*
+ * End text.
+ */
+
+/*
+ * Begin textarea.
+ */
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-input-wrapper textarea{
+    -webkit-appearance: none;
+    background: #ffffff;
+    border: 1px solid #c9c9c9;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    color: #666666;
+    display: block;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 20px;
+    margin: 0;
+    min-width: 200px;
+    outline: none;
+    padding: 4px 9px;
+    resize: vertical;
+    width: 90%;
+}
+
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-input-wrapper textarea:focus{
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    outline: none;
+}
+
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-input-wrapper textarea:disabled{
+    opacity: 0.5;
+}
+/*
+ * End textarea.
+ */
+
+/*
+ * Begin checkbox & radio.
+ */
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-input-wrapper input[type=checkbox],
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-input-wrapper input[type=radio]{
+    -webkit-appearance: none;
+    background: #ffffff;
+    border: 1px solid #acacac;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    border-radius: 16px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    cursor: pointer;
+    float: left;
+    height: auto;
+    margin: 1px 5px 1px 0;
+    outline: none !important;
+    padding: 8px !important;
+    position: relative;
+    width: auto;
+}
+
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-input-wrapper input[type=checkbox]{
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-input-wrapper input[type=checkbox]:hover,
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-input-wrapper input[type=radio]:hover{
+    border: 1px solid #ff6300;
+    color: #ff6300;
+}
+
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-input-wrapper input[type=checkbox]:checked:before,
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-input-wrapper input[type=checkbox]:checked:after,
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-input-wrapper input[type=radio]:checked:before,
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-input-wrapper input[type=radio]:checked:after{
+    background: #ff6300 !important;
+    border: 1px solid #ff6300 !important;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    border-radius: 16px;
+    color: #ff6300 !important;
+    content: ' ' !important;
+    font-size: 16px !important;
+    left: -1px !important;
+    height: 16px !important;
+    line-height: 16px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: absolute !important;
+    top: -1px !important;
+    width: 16px !important;
+}
+
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-input-wrapper input[type=checkbox]:checked:before,
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-input-wrapper input[type=checkbox]:checked:after{
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-input-wrapper input[type=checkbox]:disabled,
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-input-wrapper input[type=radio]:disabled,
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-input-wrapper input[type=checkbox]:disabled:hover,
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-input-wrapper input[type=radio]:disabled:hover{
+    border: 1px solid #acacac;
+    cursor: default;
+    opacity: 0.5;
+}
+/*
+ * End checkbox & radio.
+ */
+
+/*
+ * Begin list.
+ */
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-input-wrapper ul.multiple-select{
+    background: #ffffff;
+    border: 1px solid #c9c9c9;
+    list-style: none;
+    margin: 0 !important;
+    max-height: 80px;
+    overflow-y: scroll;
+    padding: 9px;
+}
+
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-input-wrapper ul.single{
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-input-wrapper ul li{
+    margin: 0 !important;
+}
+
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-input-wrapper ul li label{
+    font-style: normal;
+}
+/*
+ * End list.
+ */
+
+/*
+ * Begin submit/button.
+ */
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-input-wrapper input[type=submit],
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-input-wrapper input[type=button]{
+    -webkit-appearance: none;
+    background: #ff6300;
+    border: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    color: #ffffff;
+    cursor: pointer;
+    display: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 40px;
+    height: 40px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+    -webkit-transition: background 300ms linear;
+    -moz-transition: background 300ms linear;
+    -o-transition: background 300ms linear;
+    transition: background 300ms linear;
+}
+
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-input-wrapper input[type=submit]:hover,
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-input-wrapper input[type=submit]:focus,
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-input-wrapper input[type=button]:hover,
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-input-wrapper input[type=button]:focus{
+    background: #464646;
+    outline: none;
+}
+
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-input-wrapper input[type=submit]:disabled,
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-input-wrapper input[type=button]:disabled{
+    opacity: 0.5;
+}
+/*
+ * End submit/button.
+ */
+
+/*
+ * Begin loader.
+ */
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-input-wrapper .dopbcp-submit-loader{
+    background: url('../images/loader.gif') no-repeat center center;
+    height: 40px;
+}
+/*
+ * End loader.
+ */
+
+/*
+ * *********************************************************** Begin DOP select.
+ */
+.DOPBCPCalendar-sidebar .DOPSelect{
+    width: 220px !important;
+}
+
+/*
+ * Single select.
+ */
+.DOPBCPCalendar-sidebar .DOPSelect .dopselect-select{
+    /*width: 85px !important;*/
+    background: #ffffff;
+    border: 1px solid #c9c9c9;
+}
+
+.DOPBCPCalendar-sidebar .DOPSelect .dopselect-select .dopselect-selection{
+    color: #666666 !important;
+    font-family: 'Open Sans', sans-serif !important;
+    font-size: 13px !important;
+    font-weight: 300 !important;
+    height: 28px !important;
+    line-height: 28px !important;
+    width: 180px !important;
+}
+
+.DOPBCPCalendar-sidebar .DOPSelect .dopselect-select .dopselect-icon{
+    color: #c9c9c9 !important;
+    line-height: 28px !important;
+    height: 28px !important;
+    width: 28px !important;
+    display:inline-block;
+    text-align: center;
+}
+
+.DOPBCPCalendar-sidebar .DOPSelect .dopselect-select:hover .dopselect-icon{
+    color: #ff6300 !important;
+}
+
+.DOPBCPCalendar-sidebar .DOPSelect.dopselect-single ul{
+    background: #ffffff !important;
+    border: 1px solid #464646 !important;
+    width: 218px !important;
+}
+
+.DOPBCPCalendar-sidebar .DOPSelect.dopselect-single ul li{
+    background: #ffffff !important;
+    color: #666666 !important;
+    font-family: 'Open Sans', sans-serif !important;
+    font-size: 12px !important;
+    font-weight: 300 !important;
+    height: 30px !important;
+    line-height: 30px !important;
+    width: 200px !important;
+}
+
+.DOPBCPCalendar-sidebar .DOPSelect.dopselect-single ul li:hover,
+.DOPBCPCalendar-sidebar .DOPSelect.dopselect-single ul li.dopselect-selected{
+    background: #464646 !important;
+    color: #ffffff !important;
+}
+
+/*
+ * Small single select.
+ */
+.DOPBCPCalendar-sidebar .DOPSelect.dopbcp-small{
+    width: 105px !important;
+}
+
+.DOPBCPCalendar-sidebar .DOPSelect.dopbcp-small .dopselect-select .dopselect-selection{
+    width: 65px !important;
+}
+
+.DOPBCPCalendar-sidebar .DOPSelect.dopbcp-small ul{
+    width: 103px !important;
+}
+
+.DOPBCPCalendar-sidebar .DOPSelect.dopbcp-small ul li{
+    width: 95px !important;
+}
+
+/* 
+ * Big select.
+ */
+.DOPBCPCalendar-sidebar .DOPSelect.dopbcp-big{
+    width: 100% !important;
+}
+
+.DOPBCPCalendar-sidebar .DOPSelect.dopbcp-small .dopselect-select .dopselect-selection{
+    width: 43px !important;
+    display:inline-block;
+    padding-left: 10px;
+}
+
+.DOPBCPCalendar-sidebar .DOPSelect.dopbcp-small ul{
+    width: 103px !important;
+}
+
+.DOPBCPCalendar-sidebar .DOPSelect.dopbcp-small ul li{
+    width: 95px !important;
+}
+/*
+ * ************************************************************* End DOP select.
+ */
+
+/*
+ * ************************************************************* Begin messages.
+ */
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-message{
+    background: #464646;
+    color: #ffffff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 20px;
+    margin: 0 0 10px 0;
+    padding: 5px 10px;
+}
+
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-message.dopbcp-success{
+    background: #9cbc72;
+}
+
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-message.dopbcp-error{
+    background: #f1705c;
+}
+/*
+ * *************************************************************** End messages.
+ */
+
+/*
+ * ***************************************************************** Begin cart.
+ */
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-cart-wrapper{
+    margin: 0 -10px -10px -10px;
+}
+
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-cart-wrapper .dopbcp-cart{
+    border: none;
+    border-collapse: collapse !important;
+    border-spacing: 0 !important;
+    margin: 0 0 9px 0 !important;
+    table-layout: fixed !important;
+    width: 100% !important;
+}
+
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-cart-wrapper .dopbcp-cart td{
+    border: none !important;
+    display: table-cell;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 15px;
+    overflow: hidden;
+    padding: 2px 0 3px 0 !important;
+    text-align: left;
+    vertical-align: top;
+}
+
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-cart-wrapper .dopbcp-cart td.dopbcp-label{
+    color: #424242;
+    font-weight: bold;
+    padding: 2px 0 3px 10px !important;
+}
+
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-cart-wrapper .dopbcp-cart td.dopbcp-value{
+    background: none;
+    color: #666666;
+    padding: 2px 10px 3px 0 !important;
+}
+
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-cart-wrapper .dopbcp-cart td.dopbcp-value.dopbcp-price{
+    font-weight: bold;
+}
+
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-cart-wrapper .dopbcp-cart td.dopbcp-value.dopbcp-info{
+    font-style: italic;
+}
+
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-cart-wrapper .dopbcp-cart td.dopbcp-value .dopbcp-info-rule{
+    font-size: 12px;
+    font-style: normal;
+}
+
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-cart-wrapper .dopbcp-cart td.dopbcp-value .dopbcp-info-price{
+    font-size: 12px;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-cart-wrapper .dopbcp-cart tr.dopbcp-separator td{
+    background: none;
+    border: none !important;
+    height: 20px;
+}
+
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-cart-wrapper .dopbcp-cart tr.dopbcp-separator td.dopbcp-label{
+    padding: 0 0 0 10px !important; 
+}
+
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-cart-wrapper .dopbcp-cart tr.dopbcp-separator td.dopbcp-value{
+    padding: 0 10px 0 0 !important; 
+}
+
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-cart-wrapper .dopbcp-cart tr.dopbcp-separator td .dopbcp-line{
+    border-bottom: 1px solid #cccccc;
+    height: 0;
+    padding: 19px 0 0 0;
+    margin: 0 0 20px 0;
+}
+
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-cart-wrapper .dopbcp-cart .dopbcp-total td.dopbcp-label{
+    background: #464646;
+    color: #fcfcfc;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 20px;
+    padding: 20px 0 20px 10px !important;
+}
+
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-cart-wrapper .dopbcp-cart .dopbcp-total td.dopbcp-value{
+    background: #464646;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 20px;
+    padding: 20px 10px 20px 0 !important;
+}
+
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-cart-wrapper .dopbcp-cart .dopbcp-deposit td.dopbcp-label{
+    background: #464646;
+    border-bottom: 1px solid #cccccc !important;
+    color: #fcfcfc;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 20px;
+    padding: 10px 0 9px 10px !important;
+}
+
+.DOPBCPCalendar-sidebar .dopbcp-module .dopbcp-cart-wrapper .dopbcp-cart .dopbcp-deposit td.dopbcp-value{
+    background: #464646;
+    border-bottom: 1px solid #cccccc !important;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 20px;
+    padding: 10px 10px 9px 0 !important;
+}
+/*
+ * ******************************************************************* End cart.
+ */
+
+/*
+ * ************************************************* Begin jQuery UI datepicker.
+ */
+.DOPBCPCalendar-datepicker.ui-datepicker{
+    background: #ffffff !important;
+    border: 1px solid #464646 !important;
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    width: 218px !important;
+}
+
+/*
+ * jQuery UI datepicker header.
+ */
+.DOPBCPCalendar-datepicker.ui-datepicker .ui-datepicker-header{
+    background: #464646 !important;
+    border-bottom: 1px solid #464646 !important;
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+}
+
+.DOPBCPCalendar-datepicker.ui-datepicker .ui-datepicker-header .ui-datepicker-next,
+.DOPBCPCalendar-datepicker.ui-datepicker .ui-datepicker-header .ui-datepicker-prev{
+    background-color: #464646 !important;
+    background-image: url('../images/sprite.png') !important;
+    background-size: 320px 80px;
+    border: none !important;
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    border-radius: 0 !important;
+    cursor: pointer !important;
+    height: 38px !important;
+    left: auto !important;
+    position: relative !important;
+    right: auto !important;
+    top: auto !important;
+    width: 38px !important;
+    -webkit-transition: background-color 300ms linear !important;
+    -moz-transition: background-color 300ms linear !important;
+    -o-transition: background-color 300ms linear !important;
+    transition: background-color 300ms linear !important;
+}
+
+.DOPBCPCalendar-datepicker.ui-datepicker .ui-datepicker-header .ui-datepicker-next:hover,
+.DOPBCPCalendar-datepicker.ui-datepicker .ui-datepicker-header .ui-datepicker-prev:hover{
+    background-color: #acacac !important;
+}
+
+.DOPBCPCalendar-datepicker.ui-datepicker .ui-datepicker-header .ui-datepicker-next.ui-state-disabled,
+.DOPBCPCalendar-datepicker.ui-datepicker .ui-datepicker-header .ui-datepicker-prev.ui-state-disabled{
+    display: none !important;
+}
+
+.DOPBCPCalendar-datepicker.ui-datepicker .ui-datepicker-header .ui-datepicker-next{
+    background-position: -281px -1px !important;
+    float: right !important;
+}
+
+.DOPBCPCalendar-datepicker.ui-datepicker .ui-datepicker-header .ui-datepicker-prev{
+    background-position: -241px -1px !important;
+    float: left !important;
+}
+
+.DOPBCPCalendar-datepicker.ui-datepicker .ui-datepicker-header .ui-datepicker-next .ui-icon,
+.DOPBCPCalendar-datepicker.ui-datepicker .ui-datepicker-header .ui-datepicker-prev .ui-icon{
+    display: none !important;
+}
+
+.DOPBCPCalendar-datepicker.ui-datepicker .ui-datepicker-header .ui-datepicker-title,
+.DOPBCPCalendar-datepicker.ui-datepicker .ui-datepicker-header .ui-datepicker-month,
+.DOPBCPCalendar-datepicker.ui-datepicker .ui-datepicker-header .ui-datepicker-year{
+    color: #ffffff !important;
+    font-family: 'Open Sans', sans-serif !important;
+    font-size: 15px !important;
+    font-weight: 300 !important;
+    line-height: 38px !important;
+    text-align: center !important;
+}
+
+.DOPBCPCalendar-datepicker.ui-datepicker .ui-datepicker-header .ui-datepicker-title{
+    margin: 0 38px !important;
+}
+
+/*
+ * jQuery UI datepicker calendar.
+ */
+.DOPBCPCalendar-datepicker.ui-datepicker .ui-datepicker-calendar{
+    border-collapse: collapse !important;
+    border-spacing: 0 !important;
+    margin: 0 !important;
+    table-layout: fixed !important;
+    width: 100% !important;
+}
+
+.DOPBCPCalendar-datepicker.ui-datepicker .ui-datepicker-calendar th{
+    background: #acacac !important;
+    border: 1px solid #c9c9c9 !important;
+    border-top: none !important;
+    color: #ffffff !important;
+    font-family: 'Open Sans', sans-serif !important;
+    font-size: 13px !important;
+    font-weight: 300 !important;
+    line-height: 18px !important;
+    padding: 0 !important;
+    text-align: center !important;
+}
+
+.DOPBCPCalendar-datepicker.ui-datepicker .ui-datepicker-calendar td{
+    border: 1px solid #c9c9c9 !important;
+    padding: 0 !important;
+}
+
+.DOPBCPCalendar-datepicker.ui-datepicker .ui-datepicker-calendar td.ui-datepicker-other-month{
+    background: #eeeeee !important;
+    line-height: 17px !important;
+}
+
+.DOPBCPCalendar-datepicker.ui-datepicker .ui-datepicker-calendar .ui-state-disabled span,
+.DOPBCPCalendar-datepicker.ui-datepicker .ui-datepicker-calendar a{
+    background: #ffffff !important;
+    border: 0 !important;
+    color: #acacac !important;
+    display: block !important;
+    font-family: 'Open Sans', sans-serif !important;
+    font-size: 13px !important;
+    font-weight: 300 !important;
+    line-height: 19px !important;
+    padding: 0 !important;
+    text-align: center !important;
+    text-decoration: none !important;
+}
+
+.DOPBCPCalendar-datepicker.ui-datepicker .ui-datepicker-calendar a{
+    color: #464646 !important;
+}
+
+.DOPBCPCalendar-datepicker.ui-datepicker .ui-datepicker-calendar a.ui-state-active,
+.DOPBCPCalendar-datepicker.ui-datepicker .ui-datepicker-calendar a:hover{
+    border: 1px solid #464646 !important;
+    line-height: 17px !important;
+}
+/*
+ * *************************************************** End jQuery UI datepicker.
+ */
+/*
+ * ***************************************************************************** End sidebar.
+ */
+
+/*
+ * ***************************************************************************** Begin info message.
+ */
+.DOPBCPCalendar-info-message{
+    border: 1px solid #cccccc;
+    display: none;
+    margin: 20px 0;
+    overflow: hidden;
+    padding: 19px 9px;
+    position: relative;
+}
+
+.DOPBCPCalendar-info-message .dopbcp-icon{
+    background-image:url('../images/sprite.png');
+    background-size: 320px 80px;
+    float: left;
+    height: 40px;
+    width: 40px;
+}
+
+.DOPBCPCalendar-info-message .dopbcp-text{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    margin: 0 80px 0 60px;
+}
+
+.DOPBCPCalendar-info-message .dopbcp-timer{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    height: 20px;
+    line-height: 20px;
+    position: absolute;
+    right: 49px;
+    text-align: center;
+    top: 19px;
+    width: 25px;
+}
+
+.DOPBCPCalendar-info-message .dopbcp-close{
+    background-image:url('../images/sprite.png');
+    background-size: 320px 80px;
+    background-position: -120px -40px;
+    display: block;
+    height: 20px;
+    position: absolute;
+    right: 19px;
+    top: 19px;
+    width: 20px;
+}
+
+/*
+ * Success info message.
+ */
+.DOPBCPCalendar-info-message.dopbcp-success{
+    border: 1px solid #9cbc72;
+}
+
+.DOPBCPCalendar-info-message.dopbcp-success .dopbcp-icon{
+    background-color: #9cbc72;
+    background-position: -40px -40px;
+}
+
+.DOPBCPCalendar-info-message.dopbcp-success .dopbcp-text,
+.DOPBCPCalendar-info-message.dopbcp-success .dopbcp-timer{
+    color: #9cbc72;
+}
+
+.DOPBCPCalendar-info-message.dopbcp-success .dopbcp-close{
+    background-color: #9cbc72;
+}
+
+/*
+ * Error info message.
+ */
+.DOPBCPCalendar-info-message.dopbcp-error{
+    border: 1px solid #dd6464;
+}
+
+.DOPBCPCalendar-info-message.dopbcp-error .dopbcp-icon{
+    background-color: #dd6464;
+    background-position: -80px -40px;
+}
+
+.DOPBCPCalendar-info-message.dopbcp-error .dopbcp-text,
+.DOPBCPCalendar-info-message.dopbcp-error .dopbcp-timer{
+    color: #dd6464;
+}
+
+.DOPBCPCalendar-info-message.dopbcp-error .dopbcp-close{
+    background-color: #dd6464;
+}
+
+.DOPBCPCalendar-info-message .dopbcp-close:hover{
+    background-color: #ff6300;
+}
+/*
+ * ***************************************************************************** End info message.
+ */
+
+/*
+ * ***************************************************************************** Begin tooltip.
+ */
+.DOPBCPCalendar-tooltip{
+    background: #ffffff;
+    border: 1px solid #464646;
+    color: #acacac;
+    display: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    left: 0px;
+    line-height: 20px;
+    max-width: 500px;
+    padding: 9px;
+    position: absolute;
+    top: 0px;
+    z-index: 1000000;
+}
+
+.DOPBCPCalendar-tooltip.dopbcp-text{
+    padding: 19px 9px;
+}
+/*
+ * ***************************************************************************** End tooltip.
+ */
+
+/*
+ * ***************************************************************************** Begin WooCommerce.
+ */
+#booking,
+.reset_variations{
+    display: none !important;
+}
+
+#dopbcp-wc-booking-reservation.dopbcp-loader{
+    background: url('../images/loader.gif') no-repeat center center;
+    display: block;
+}
+/*
+ * ***************************************************************************** End WooCommerce.
+ */
+

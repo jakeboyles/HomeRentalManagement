@@ -1,0 +1,2032 @@
+@charset "utf-8";
+
+/*
+* Title                   : Booking Calendar PRO (jQuery Plugin)
+* Version                 : 2.0
+* File                    : jquery.dop.BackendBookingCalendarPRO.css
+* File Version            : 2.0
+* Created / Last Modified : 29 September 2014
+* Author                  : Dot on Paper
+* Copyright               : © 2011 Dot on Paper
+* Website                 : http://www.dotonpaper.net
+* Description             : Booking Calendar PRO Back End Stylesheet.
+*/
+
+/*
+ * ***************************************************************************** Container
+ */
+.DOPBCPCalendar-container{
+    background: none;
+    font-family: 'Open Sans', sans-serif !important;
+    font-size: 13px;
+    line-height: 20px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    min-width: 240px;
+}
+
+.DOPBCPCalendar-container .dopbcp-loader, .dopbcp-loader{
+    background: url('../images/loader.gif') no-repeat center center;
+    background-color: #eeeeee;
+    border: 1px solid #cccccc;
+    height: 38px;
+}
+
+.DOPBCPCalendar-clear{
+    clear: both;
+}
+
+/*
+ * ***************************************************************************** Begin navigation.
+ */
+.DOPBCPCalendar-navigation{
+    background-color: #eeeeee;
+    border: 1px solid #cccccc;
+    margin: 0 0 5px 0;
+    padding: 0;
+    position: relative;
+}
+
+.DOPBCPCalendar-navigation .add-btn,
+.DOPBCPCalendar-navigation .next-btn,
+.DOPBCPCalendar-navigation .previous-btn,
+.DOPBCPCalendar-navigation .remove-btn{
+    background-color: #c9c9c9;
+    background-image:url('../images/sprite.png');
+    display: block;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 40px;
+    -webkit-transition: background-color 600ms linear;
+    -moz-transition: background-color 600ms linear;
+    -o-transition: background-color 600ms linear;
+    transition: background-color 600ms linear;
+    z-index: 9;
+}
+
+.DOPBCPCalendar-navigation .add-btn:hover,
+.DOPBCPCalendar-navigation .next-btn:hover,
+.DOPBCPCalendar-navigation .previous-btn:hover,
+.DOPBCPCalendar-navigation .remove-btn:hover{
+    background-color: #ff6300;
+}
+
+.DOPBCPCalendar-navigation .add-btn{
+    background-position: 0 -80px;
+    left: 9px;
+    top: 9px;
+}
+
+.DOPBCPCalendar-navigation .remove-btn{
+    background-position: -40px -80px;
+    display: none;
+    left: 51px;
+    top: 9px;
+}
+
+.DOPBCPCalendar-navigation .remove-btn.no-add{
+    left: 9px;
+}
+
+.DOPBCPCalendar-navigation .previous-btn{
+    background-position: -80px -80px;
+    display: none;
+    right: 51px;
+    top: 9px;
+}
+
+.DOPBCPCalendar-navigation .next-btn{
+    background-position: -120px -80px;
+    right: 9px;
+    top: 9px;
+}
+
+.DOPBCPCalendar-navigation .add-btn .info,
+.DOPBCPCalendar-navigation .next-btn .info,
+.DOPBCPCalendar-navigation .previous-btn .info,
+.DOPBCPCalendar-navigation .remove-btn .info{
+    background-color: #252525;
+    color: #ffffff;
+    display: none;
+    font-family: 'Open Sans' !important;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 20px;
+    max-width: 230px;
+    margin: 42px 0 0 0;
+    padding: 10px;
+    position: absolute;
+    white-space: nowrap;
+    z-index: 1000000;
+}
+
+.DOPBCPCalendar-navigation .next-btn .info,
+.DOPBCPCalendar-navigation .previous-btn .info{
+    right: 0;
+}
+
+.DOPBCPCalendar-navigation .add-btn:hover .info,
+.DOPBCPCalendar-navigation .next-btn:hover .info,
+.DOPBCPCalendar-navigation .previous-btn:hover .info,
+.DOPBCPCalendar-navigation .remove-btn:hover .info{
+    display: block;
+}
+
+.DOPBCPCalendar-navigation .month-year{
+    color: #464646;
+    font-family: 'Open Sans' !important;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 40px;
+    margin: 0;
+    padding: 9px 9px 10px 9px;
+    text-align: center;
+}
+
+.DOPBCPCalendar-navigation .week{
+    margin: 0;
+    overflow: hidden;
+    padding: 0 4px 9px 4px;
+}
+
+.DOPBCPCalendar-navigation .week .day{
+    color: #898989;
+    display: block;
+    font-family: 'Open Sans', sans-serif !important;
+    font-size: 12px;
+    line-height: 20px;
+    float: left;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+/*
+ * ***************************************************************************** End navigation.
+ */
+
+/*
+ * ***************************************************************************** Begin calendar.
+ */
+.DOPBCPCalendar-calendar{
+    margin: 0;
+    position: relative;
+    text-align: center;
+}
+
+.DOPBCPCalendar-month{
+    border: 1px solid #cccccc;
+    background: #eeeeee;
+    margin: 5px 0 0 0;
+    overflow: hidden;
+    padding: 9px 0 9px 5px;
+}
+
+.DOPBCPCalendar-month-year{
+    background-color: #eeeeee;
+    border: 1px solid #cccccc;
+    color: #464646;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 38px;
+    height: 38px;
+    margin: 20px 0 5px 0;
+    overflow: hidden;
+    padding: 0 0 0 9px;
+    text-align: left;
+}
+
+/*
+ * ***************************************************************** Begin days.
+ */
+.DOPBCPCalendar-day{
+    clear: none !important;
+    float: left;
+    margin:  0 0 2px 0;
+    padding: 0;
+}
+
+.DOPBCPCalendar-day .bind-left, 
+.DOPBCPCalendar-day .bind-right{
+    float: left;
+    opacity: 0;
+    width: 1px;
+}
+
+.DOPBCPCalendar-day .bind-left.enabled, 
+.DOPBCPCalendar-day .bind-right.enabled{
+    opacity: 1;
+}
+
+.DOPBCPCalendar-day .bind-left .header, 
+.DOPBCPCalendar-day .bind-right .header{
+    background-color: #cccccc !important; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your DEFAULT color. */
+    border: 1px solid #cccccc !important; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your DEFAULT color. */
+    border-left: none !important;
+    border-right: none !important;
+    height: 17px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 1px !important;
+}
+
+.DOPBCPCalendar-day .bind-left .content, 
+.DOPBCPCalendar-day .bind-right .content{
+    background-color: #ffffff !important;
+    border-bottom: 1px solid #cccccc !important; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your DEFAULT color. */
+    font-family: 'Open Sans', sans-serif !important;
+    font-size: 12px !important;
+    font-weight: 300 !important;
+    line-height: 19px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 1px !important;
+}
+
+.DOPBCPCalendar-day .bind-content{
+    float: left;
+    overflow:hidden;
+}
+
+.DOPBCPCalendar-day .bind-content .header{
+    background-color: #cccccc !important; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your DEFAULT color. */
+    border: 1px solid #cccccc !important; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your DEFAULT color. */
+    display: block !important;
+    height: 17px !important;
+    margin: 0 !important;
+    overflow: hidden;
+    padding: 0 0 0 4px !important;
+    width: auto !important;
+}
+
+.DOPBCPCalendar-day .bind-content.group1 .header{
+    border-right: none !important;
+}
+
+.DOPBCPCalendar-day .bind-content.group2 .header{
+    border-left: none !important;
+    border-right: none !important;
+}
+
+.DOPBCPCalendar-day .bind-content.group3 .header{
+    border-left: none !important;
+}
+
+.DOPBCPCalendar-day .bind-content .header .day{
+    color: #ffffff;
+    float: left;
+    font-family: 'Open Sans', sans-serif !important;
+    font-size: 12px !important;
+    font-weight: 300 !important;
+    line-height: 17px !important;
+    margin: 0;
+    padding: 0;
+}
+
+.DOPBCPCalendar-day .bind-content .header .info,
+.DOPBCPCalendar-day .bind-content .header .notes{
+    background-color: transparent;
+    background-image: url('../images/sprite.png');
+    float: right;
+    height: 17px;
+    margin: 0 0 0 1px;
+    width: 17px;
+    -webkit-transition: background-color 300ms linear;
+    -moz-transition: background-color 300ms linear;
+    -o-transition: background-color 300ms linear;
+    transition: background-color 300ms linear;
+}
+
+.DOPBCPCalendar-day .bind-content .header .info:hover,
+.DOPBCPCalendar-day .bind-content .header .notes:hover{
+    background-color: #ff6300;
+}
+
+.DOPBCPCalendar-day .bind-content .header .info{
+    background-position: -161px -101px;
+}
+
+.DOPBCPCalendar-day .bind-content .header .notes{
+    background-position: -181px -101px;
+}
+
+.DOPBCPCalendar-day .bind-content .content{
+    background-color: #ffffff !important;
+    border: 1px solid #cccccc !important; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your DEFAULT color. */
+    border-top: none !important;
+    color: #222222 !important;
+    display: block !important;
+    float: none !important;
+    font-family: 'Open Sans', sans-serif !important;
+    font-size: 12px !important;
+    font-weight: 300 !important;
+    line-height: 19px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: left !important;
+    vertical-align: middle !important;
+    width: auto !important;
+}
+
+.DOPBCPCalendar-day .bind-content.group1 .content{
+    border-right: none !important;
+}
+
+.DOPBCPCalendar-day .bind-content.group2 .content{
+    border-left: none !important;
+    border-right: none !important;
+}
+
+.DOPBCPCalendar-day .bind-content.group3 .content{
+    border-left: none !important;
+}
+
+.DOPBCPCalendar-day .bind-content .content .old-price{
+    color: #acacac;
+    float: left;
+    font-family: 'Open Sans', sans-serif !important;
+    font-size: 12px !important;
+    font-weight: 300;
+    line-height: 19px !important;
+    margin: 0 !important;
+    padding: 0 0 0 5px !important;
+    text-decoration: line-through;
+}
+
+.DOPBCPCalendar-day .bind-content .content .price{
+    color: #464646;
+    float: left;
+    font-family: 'Open Sans', sans-serif !important;
+    font-size: 12px !important;
+    line-height: 19px !important;
+    margin: 0 !important;
+    padding: 0 0 0 5px !important;
+}
+
+.DOPBCPCalendar-day .bind-content .content .available{
+    color: #acacac;
+    font-family: 'Open Sans', sans-serif !important;
+    font-size: 11px !important;
+    font-weight: 300;
+    line-height: 19px !important;
+    padding: 0 0 0 5px !important;
+    width: 100%;
+}
+
+.DOPBCPCalendar-day.dopbcp-style-small .content{
+    display: none !important;
+}
+
+/*
+ * Last month day.
+ */
+.DOPBCPCalendar-day.last-month{
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+/* 
+ * Past day.
+ */
+.DOPBCPCalendar-day.past-day{
+    opacity: 0.25;
+}
+
+/*
+ * Current month day.
+ */
+.DOPBCPCalendar-day.curr-month{
+    cursor: pointer;
+}
+
+/*
+ * Next month day.
+ */
+.DOPBCPCalendar-day.next-month{
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+/*
+ * Available day.
+ */
+.DOPBCPCalendar-day.available .header{
+    background-color: #68ba68 !important; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your AVAILABLE color. */
+    border-color: #68ba68 !important; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your AVAILABLE color. */
+}
+
+.DOPBCPCalendar-day.available .content{
+    border-color: #68ba68 !important; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your AVAILABLE color. */
+}
+
+/*
+ * Booked day.
+ */
+.DOPBCPCalendar-day.booked .header{
+    background-color: #dd6464 !important; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your BOOKED color. */
+    border-color: #dd6464 !important; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your BOOKED color. */
+}
+
+.DOPBCPCalendar-day.booked .content{
+    border-color: #dd6464 !important; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your BOOKED color. */
+}
+
+/*
+ * Special day.
+ */
+.DOPBCPCalendar-day.special .header{
+    background-color: #ba68ba !important; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your SPECIAL color. */
+    border-color: #ba68ba !important; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your SPECIAL color. */
+}
+
+.DOPBCPCalendar-day.special .content{
+    border-color: #ba68ba !important; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your SPECIAL color. */
+}
+
+/*
+ * Unavailable day.
+ */
+.DOPBCPCalendar-day.unavailable .header{
+    background-color: #cccccc !important; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your UNAVAILABLE color. */
+    border-color: #cccccc !important; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your UNAVAILABLE color. */
+}
+
+.DOPBCPCalendar-day.unavailable .content{
+    border-color: #cccccc !important; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your UNAVAILABLE color. */
+}
+
+.DOPBCPCalendar-day.dopbcp-style-small .bind-content .header{
+    height: 31px !important;
+}
+
+/*
+ * Selected day.
+ */
+.DOPBCPCalendar-day.selected .header{
+    background-color: #464646 !important; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your SELECTED color. */
+    border-color: #464646 !important; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your SELECTED color. */
+}
+
+.DOPBCPCalendar-day.selected .header .notes{
+    display: none;
+}
+
+.DOPBCPCalendar-day.selected .header .info{
+    display: none;
+}
+
+.DOPBCPCalendar-day.selected .content{
+    color: #464646 !important; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your SELECTED color. */
+    border-color: #464646 !important; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your SELECTED color. */
+}
+
+/*
+ * Day jump day.
+ */
+.DOPBCPCalendar-day.day-jump .header{
+    background-color: #464646 !important; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your DAY JUMP color. */
+    border-color: #464646 !important; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your DAY JUMP color. */
+    -webkit-transition: background 1000ms linear, border-color 1000ms linear;
+    -moz-transition: background 1000ms linear, border-color 1000ms linear;
+    -ms-transition: background 1000ms linear, border-color 1000ms linear;
+    -o-transition: background 1000ms linear, border-color 1000ms linear;
+    transition: background 1000ms linear, border-color 1000ms linear;
+}
+
+.DOPBCPCalendar-day.day-jump .content{
+    border-color: #464646 !important; /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change to your DAY JUMP color. */
+    -webkit-transition: border-color 1000ms linear;
+    -moz-transition: border-color 1000ms linear;
+    -ms-transition: border-color 1000ms linear;
+    -o-transition: border-color 1000ms linear;
+    transition: border-color 1000ms linear;
+}
+
+/*
+ * Mask day.
+ */
+.DOPBCPCalendar-day.mask{
+    cursor: default;
+    opacity: 0;  
+}
+
+/*
+ * Hide day.
+ */
+.DOPBCPCalendar-day.hide{
+    display: none;
+}
+
+/*
+ * Grouped days - first column.
+ */
+.DOPBCPCalendar-day.first-column .bind-left{
+    opacity: 0 !important;
+}
+
+/*
+ * Grouped days - last column.
+ */
+.DOPBCPCalendar-day.last-column .bind-content.group1 .header .ci,
+.DOPBCPCalendar-day.last-column .bind-content.group2 .header .ci{
+    right: 0px !important;
+}
+
+.DOPBCPCalendar-day.last-column .bind-right{
+    opacity: 0 !important;
+}
+/*
+ * ******************************************************************* End days.
+ */ 
+
+/*
+ * ***************************************************************************** End calendar.
+ */
+
+/*
+ * ***************************************************************************** Begin form.
+ */
+.DOPBCPCalendar-form-buttons{
+    padding: 0;
+    margin-bottom: 9px;
+}
+
+.DOPBCPCalendar-form{
+    margin: 0;
+    padding: 0;
+}
+
+.DOPBCPCalendar-form .input-wrapper{
+    margin: 0 0 10px 0;
+}
+
+.DOPBCPCalendar-form .input-wrapper label.for-checkbox{
+    display: block;
+    float: none !important;
+    padding: 0 0 0 23px !important;
+}
+
+.DOPBCPCalendar-form .input-wrapper label.for-textarea{
+    margin: 0;
+    width: 100%;
+}
+
+.DOPBCPCalendar-form .input-wrapper textarea{
+    width: 100% !important;
+}
+/*
+ * ***************************************************************************** End form.
+ */
+
+/*
+ * ***************************************************************************** Begin info popup.
+ */
+.DOPBCPCalendar-tooltip{
+    background: #ffffff;
+    border: 1px solid #ff6300;
+    color: #464646;
+    display: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    left: 0px;
+    line-height: 20px;
+    max-width: 500px;
+    padding: 9px;
+    position: absolute;
+    top: 0px;
+    z-index: 1000000;
+}
+
+.DOPBCPCalendar-tooltip.text{
+    padding: 19px 9px;
+}
+/*
+ * ***************************************************************************** End info popup.
+ */
+
+/*
+ * Form
+ */
+ 
+.DOPBCP-form.dopbcp-sidebar{
+    background: #fcfcfc;
+    border: 1px solid #ccc;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    float:left;
+    //max-width:420px !important;
+}
+
+.DOPBCP-form.dopbcp-sidebar.dopbcp-style-small{
+    margin-top: 10px;
+}
+
+.DOPBCP-form.dopbcp-sidebar .dopbcp-sidebar-header{
+    border-bottom: 1px solid #e6e6e6;
+    height: 40px;
+    overflow: hidden;
+    padding: 19px 4px 19px 9px;
+}
+
+.DOPBCP-form .dopbcp-button{
+    background-color: #c9c9c9;
+    border: none;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    display: block;
+    float: left;
+    height: 40px;
+    margin: 0 5px 0 0;
+    padding: 0;
+    width: 40px;
+    -webkit-transition: background-color 600ms linear;
+    -moz-transition: background-color 600ms linear;
+    -o-transition: background-color 600ms linear;
+    transition: background-color 600ms linear;
+}
+
+.DOPBCP-form .dopbcp-button.dopbcp-help{
+    background: #c9c9c9 url('../images/sprite.png') 0 0;
+}
+
+.DOPBCP-form .dopbcp-button.dopbcp-right{
+    margin: 0 0 0 5px;
+}
+
+.DOPBCP-form .dopbcp-button .dopbcp-info{
+    background-color: #252525;
+    color: #ffffff;
+    display: none;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 20px;
+    max-width: 230px;
+    margin: 42px 0 0 0;
+    padding: 10px;
+    position: absolute;
+    white-space: normal;
+    z-index: 1000000;
+}
+
+.DOPBCP-form .dopbcp-button.dopbcp-help.dopbcp-dopbcp-right .dopbcp-info{
+    margin: 42px 0 0 -210px;
+}
+
+.DOPBCP-form .dopbcp-button .dopbcp-info.dopbcp-help{
+    padding: 20px 10px;
+}
+
+.DOPBCP-form .dopbcp-button:hover,
+.DOPBCP-form .dopbcp-button.dopbcp-selected{
+    background-color: #ff6300;
+}
+
+.DOPBCP-form .dopbcp-button:hover .dopbcp-info{
+    display: block;
+}
+
+.DOPBCP-form.dopbcp-sidebar .dopbcp-sidebar-content{
+    line-height: 20px;
+    overflow: hidden;
+    padding: 8px 9px 0 9px;
+}
+
+.DOPBCP-form.dopbcp-sidebar .dopbcp-sidebar-content hr{
+    background: #c9c9c9;
+    border: none !important;
+    height: 1px;
+    margin: 0 -10px 19px -10px;
+}
+
+/*
+ * *********************************************************** Begin items list.
+ */
+.DOPBCP-form.dopbcp-sidebar .dopbcp-sidebar-content ul{
+    margin: 0;
+}
+
+.DOPBCP-form.dopbcp-sidebar .dopbcp-sidebar-content .dopbcp-item{
+    border: 1px solid #c9c9c9;
+    cursor: pointer;
+    margin: 0 0 5px 0;
+    -webkit-transition: border-color 300ms linear;
+    -moz-transition: border-color 300ms linear;
+    -o-transition: border-color 300ms linear;
+    transition: border-color 300ms linear;
+}
+
+.DOPBCP-form.dopbcp-sidebar .dopbcp-sidebar-content .dopbcp-item:last-child{
+    margin: 0;
+}
+
+.DOPBCP-form.dopbcp-sidebar .dopbcp-sidebar-content .dopbcp-item .dopbcp-header{
+    background: #c9c9c9;
+    border-bottom: 1px solid #c9c9c9;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    height: 17px;
+    margin: 0;
+    padding: 0 9px;
+    -webkit-transition: background-color 300ms linear, border-color 300ms linear;
+    -moz-transition: background-color 300ms linear, border-color 300ms linear;
+    -o-transition: background-color 300ms linear, border-color 300ms linear;
+    transition: background-color 300ms linear, border-color 300ms linear;
+}
+
+.DOPBCP-form.dopbcp-sidebar .dopbcp-sidebar-content .dopbcp-item .dopbcp-header .dopbcp-id{
+    color: #464646;
+    display: block;
+    float: left;
+    font-size: 11px;
+    line-height: 15px;
+    height: 15px;
+    margin: 1px 10px 0 0;
+    -webkit-transition: color 300ms linear;
+    -moz-transition: color 300ms linear;
+    -o-transition: color 300ms linear;
+    transition: color 300ms linear;
+}
+
+.DOPBCP-form.dopbcp-sidebar .dopbcp-sidebar-content .dopbcp-item .dopbcp-header .dopbcp-header-item{
+    display: block;
+    float: left;
+    font-size: 11px;
+    line-height: 15px;
+    height: 15px;
+    margin: 1px 2px 0 0;
+}
+
+.DOPBCP-form.dopbcp-sidebar .dopbcp-sidebar-content .dopbcp-item .dopbcp-header .dopbcp-header-item img,
+.DOPBCP-form.dopbcp-sidebar .dopbcp-sidebar-content .dopbcp-item .dopbcp-header .dopbcp-header-item .dopbcp-text{
+    color: #ffffff;
+    float: left;
+    display: block;
+    line-height: 15px;
+    height: 15px;
+    min-width: 15px;
+    text-align: center;
+}
+
+.DOPBCP-form.dopbcp-sidebar .dopbcp-sidebar-content .dopbcp-item .dopbcp-header .dopbcp-header-item.dopbcp-avatar{
+    background-color: #ffffff;
+}
+
+.DOPBCP-form.dopbcp-sidebar .dopbcp-sidebar-content .dopbcp-item .dopbcp-header .dopbcp-header-item .dopbcp-info{
+    background-color: #252525;
+    color: #ffffff;
+    display: none;
+    font-size: 12px;
+    line-height: 20px;
+    max-width: 230px;
+    margin: 16px 0 0 0;
+    padding: 10px;
+    position: absolute;
+    white-space: normal;
+    z-index: 1000000;
+}
+
+.DOPBCP-form.dopbcp-sidebar .dopbcp-sidebar-content .dopbcp-item .dopbcp-header .dopbcp-header-item:hover .dopbcp-info{
+    display: block;
+}
+
+.DOPBCP-form.dopbcp-sidebar .dopbcp-sidebar-content .dopbcp-item .dopbcp-name{
+    color: #acacac;
+    font-weight: 300;
+    line-height: 20px;
+    padding: 0 9px;
+}
+
+/*
+ * ***************************************************************************** End form.
+ */
+
+/*
+ * ******************************************************* Begin sidebar styles.
+ */
+/*
+ * Style 1
+ */
+.DOPBCP-form.dopbcp-style1{
+    float: right;
+    margin: 0 0 0 20px;
+    width: 500px;
+}
+
+.DOPBCP-form.dopbcp-style1-medium{
+    padding: 20px 0 0 0;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.DOPBCP-form.dopbcp-style1 .dopbcp-column2,
+.DOPBCP-form.dopbcp-style1 .dopbcp-column3,
+
+.DOPBCP-form.dopbcp-style1-medium .dopbcp-column2,
+.DOPBCP-form.dopbcp-style1-medium .dopbcp-column3{
+    display: none;
+}
+
+/*
+ * Style 2
+ */
+.DOPBCP-form.dopbcp-style2,
+.DOPBCP-form.dopbcp-style2-medium{
+    padding: 20px 0 0 0;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.DOPBCP-form.dopbcp-style2 col.dopbcp-column1{
+    width: 33%;
+}
+
+.DOPBCP-form.dopbcp-style2 .dopbcp-column4,
+.DOPBCP-form.dopbcp-style2 .dopbcp-column5,
+.DOPBCP-form.dopbcp-style2 .dopbcp-column6,
+
+.DOPBCP-form.dopbcp-style2-medium .dopbcp-column4,
+.DOPBCP-form.dopbcp-style2-medium .dopbcp-column5,
+.DOPBCP-form.dopbcp-style2-medium .dopbcp-column6{
+    display: block;
+    width: auto;
+}
+
+.DOPBCP-form.dopbcp-style2-medium .dopbcp-column7,
+.DOPBCP-form.dopbcp-style2-medium .dopbcp-column8,
+.DOPBCP-form.dopbcp-style2-medium .dopbcp-column9{
+    display: block;
+}
+
+/*
+ * Style 3
+ */
+.DOPBCP-form.dopbcp-style3,
+.DOPBCP-form.dopbcp-style3-medium{
+    padding: 20px 0 0 0;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.DOPBCP-form.dopbcp-style3-medium .dopbcp-column4,
+.DOPBCP-form.dopbcp-style3-medium .dopbcp-column5,
+.DOPBCP-form.dopbcp-style3-medium .dopbcp-column6,
+.DOPBCP-form.dopbcp-style3-medium .dopbcp-column7,
+.DOPBCP-form.dopbcp-style3-medium .dopbcp-column8,
+.DOPBCP-form.dopbcp-style3-medium .dopbcp-column9{
+    display: block;
+}
+
+/*
+ * Style 4
+ */
+.DOPBCP-form.dopbcp-style4{
+    float: right;
+    margin: 0 0 0 20px;
+    width: 240px;
+}
+
+.DOPBCP-form.dopbcp-style4-medium{
+    padding: 20px 0 0 0;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.DOPBCP-form.dopbcp-style4 .dopbcp-column2,
+.DOPBCP-form.dopbcp-style4 .dopbcp-column3,
+.DOPBCP-form.dopbcp-style4 .dopbcp-column5,
+.DOPBCP-form.dopbcp-style4 .dopbcp-column6,
+
+.DOPBCP-form.dopbcp-style4-medium .dopbcp-column2,
+.DOPBCP-form.dopbcp-style4-medium .dopbcp-column3,
+.DOPBCP-form.dopbcp-style4-medium .dopbcp-column5,
+.DOPBCP-form.dopbcp-style4-medium .dopbcp-column6{
+    display: none;
+}
+
+/*
+ * Style 5
+ */
+.DOPBCP-form.dopbcp-style5{
+    float: right;
+    margin: 0 0 0 20px;
+}
+
+.DOPBCP-form.dopbcp-style5-medium{
+    padding: 20px 0 0 0;
+/*    width: 100%;*/
+    margin: 0px 0 0 20px;
+}
+
+.DOPBCP-form.dopbcp-style5 .dopbcp-column2,
+.DOPBCP-form.dopbcp-style5 .dopbcp-column3,
+.DOPBCP-form.dopbcp-style5 .dopbcp-column5,
+.DOPBCP-form.dopbcp-style5 .dopbcp-column6,
+
+.DOPBCP-form.dopbcp-style5-medium .dopbcp-column2,
+.DOPBCP-form.dopbcp-style5-medium .dopbcp-column3,
+.DOPBCP-form.dopbcp-style5-medium .dopbcp-column5,
+.DOPBCP-form.dopbcp-style5-medium .dopbcp-column6{
+    display: none;
+}
+
+/*
+ * Style mobile.
+ */
+.DOPBCP-form.dopbcp-style-small{
+    margin: 10px 0 0 0;
+    padding: 10px 0 0 0;
+/*    width: 100%;*/
+}
+
+.DOPBCP-form.dopbcp-style-small td{
+    display: block;
+}
+
+.DOPBCP-form.dopbcp-style-small .dopbcp-column-separator-style,
+.DOPBCP-form.dopbcp-style-small col:last-child{
+    display: none;
+}
+/*
+ * ********************************************************* End sidebar styles.
+ */
+
+/*
+ * ***************************************************************************** Begin form inputs.
+ */
+/*
+ * Begin inputs headers.
+ */
+.DOPBCP-form .dopbcp-inputs-header{
+    border: 1px solid #e6e6e6;
+    border-right: none;
+    border-left: none;
+    height: 38px;
+    margin: 0 -10px 20px -10px;
+    overflow: hidden;
+}
+
+.DOPBCP-form .dopbcp-inputs-header h3{
+    border: none !important;
+    color: #464646;
+    float: left;
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 38px;
+    margin: 0 0 0 10px;
+    padding: 0;
+}
+
+.DOPBCP-form .dopbcp-inputs-header .dopbcp-button{
+    float: right;
+    height: 38px;
+    margin: 0 10px 0 0;
+    width: 38px;
+}
+
+.DOPBCP-form .dopbcp-inputs-header.dopbcp-display .dopbcp-button{
+    background-image: url('../images/sprite.png');
+    background-position: -1px -121px;
+}
+
+.DOPBCP-form .dopbcp-inputs-header.dopbcp-hide .dopbcp-button{
+    background-image: url('../images/sprite.png');
+    background-position: -41px -121px;
+}
+
+.DOPBCP-form .dopbcp-inputs-header .dopbcp-button.dopbcp-check-all{
+    background-image: url('../images/sprite.png');
+    background-position: -201px -121px;
+    margin: 0 5px 0 0 !important;
+}
+
+.DOPBCP-form .dopbcp-inputs-header .dopbcp-button.dopbcp-uncheck-all{
+    background-image: url('../images/sprite.png');
+    background-position: -241px -121px;
+    margin: 0 5px 0 0 !important;
+}
+
+.DOPBCP-form .dopbcp-inputs-header.dopbcp-display.dopbcp-last{
+    margin: 0 -10px;
+}
+
+.DOPBCP-form .dopbcp-inputs-header.dopbcp-hide.dopbcp-last{
+    margin: 0 -10px 20px -10px;
+}
+
+/*
+ * Inside inputs wrapper.
+ */ 
+.DOPBCP-form .dopbcp-inputs-wrapper .dopbcp-inputs-header{
+    background: #e6e6e6;
+    margin: 0 0 10px 0;
+}
+
+.DOPBCP-form .dopbcp-inputs-wrapper .dopbcp-inputs-header h3{
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.DOPBCP-form .dopbcp-inputs-wrapper .dopbcp-inputs-header.dopbcp-hide,
+.DOPBCP-form .dopbcp-inputs-wrapper .dopbcp-inputs-header.dopbcp-last,
+.DOPBCP-form .dopbcp-inputs-wrapper .dopbcp-inputs-header .dopbcp-button{
+    margin: 0;
+}
+/*
+ * End inputs headers.
+ */
+
+/*
+ * Begin inputs wrappers.
+ */
+.DOPBCP-form .dopbcp-inputs-wrapper{
+    margin: 0 0 20px 0;
+    overflow: hidden;
+}
+
+.DOPBCP-form .dopbcp-input-wrapper{
+    width: 220px;
+    margin: 0 0 8px 0;
+    overflow: hidden;
+}
+
+.DOPBCP-form .dopbcp-input-wrapper.dopbcp-input-status-wrapper{
+    overflow: visible;
+}
+
+.DOPBCP-form .dopbcp-input-wrapper.dopbcp-input-price-wrapper{
+    margin-top: 40px;
+}
+
+
+.DOPBCP-form .dopbcp-input-wrapper.dopbcp-left{
+    margin: 0 30px 10px 0;
+    overflow: hidden;
+}
+
+.DOPBCP-form .dopbcp-checkboxes-wrapper{
+    float: left;
+    overflow: hidden;
+    width: 170px;
+}
+
+.DOPBCP-form .dopbcp-input-wrapper.dopbcp-last{
+    margin-bottom: 0;
+}
+
+/*
+ * Inside inputs wrapper.
+ */ 
+.DOPBCP-form .dopbcp-inputs-wrapper .dopbcp-inputs-wrapper{
+    margin: 0 0 10px 0;
+}
+.DOPBCP-form .dopbcp-inputs-wrapper .dopbcp-inputs-wrapper.dopbcp-last{
+    margin: 0;
+}
+/*
+ * End inputs wrappers.
+ */
+
+/*
+ * Begin label.
+ */
+.DOPBCP-form .dopbcp-input-wrapper label{
+    color: #666666;
+    display: block;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 20px;
+    margin: 0;
+}
+
+.DOPBCP-form .dopbcp-input-wrapper label.dopbcp-for-checkboxes,
+.DOPBCP-form .dopbcp-input-wrapper label.dopbcp-for-radios{
+    margin: 0;
+}
+
+.DOPBCP-form .dopbcp-input-wrapper label.dopbcp-for-checkbox,
+.DOPBCP-form .dopbcp-input-wrapper label.dopbcp-for-radio{
+    margin: 0;
+    width: auto;
+}
+
+.DOPBCP-form .dopbcp-input-wrapper label.dopbcp-for-checkbox-with-width{
+    margin: 0;
+}
+
+.DOPBCP-form .dopbcp-input-wrapper label.dopbcp-for-switch{
+    cursor: default;
+    margin: 0;
+}
+
+.DOPBCP-form .dopbcp-input-wrapper label .dopbcp-required{
+    color: #f1705c;
+}
+
+.DOPBCP-form .dopbcp-input-wrapper label:hover{
+    color: #ff6300;
+}
+/*
+ * End label.
+ */
+
+/* 
+ * Begin text/passowrd.
+ */
+.DOPBCP-form .dopbcp-input-wrapper input[type=text],
+.DOPBCP-form .dopbcp-input-wrapper input[type=password]{
+    -webkit-appearance: none;
+    background: #ffffff;
+    border: 1px solid #c9c9c9;
+    border-radius: 0px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    color: #acacac;
+    float: left;
+    color: #666666;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 20px;
+    margin: 0;
+    outline: none;
+    padding: 4px 9px;
+    width: 200px;
+}
+
+.DOPBCP-form .dopbcp-input-wrapper input[type=text].hasDatepicker{
+    -webkit-appearance: none;
+    background-image: url('../images/sprite.png');
+    background-position: -5px -207px;
+    padding: 4px 9px 4px 34px;
+    width: 175px;
+}
+
+.DOPBCP-form .dopbcp-input-wrapper input[type=text].dopbcp-small,
+.DOPBCP-form .dopbcp-input-wrapper input[type=password].dopbcp-small{
+    width: 80px;
+}
+
+.DOPBCP-form .dopbcp-input-wrapper input[type=text]:focus,
+.DOPBCP-form .dopbcp-input-wrapper input[type=password]:focus{
+    border: 1px solid #c9c9c9;
+}
+
+.DOPBCP-form .dopbcp-input-wrapper input[type=text]:disabled,
+.DOPBCP-form .dopbcp-input-wrapper input[type=password]:disabled{
+    opacity: 0.5;
+}
+
+/*
+ * Date
+ */
+.DOPBCP-form .dopbcp-input-wrapper input[type=text].dopbcp-date{
+    background-image: url('../images/sprite.png');
+    background-position: -5px -207px;
+    margin: 0 0 5px 0;
+    padding: 4px 9px 4px 34px;
+}
+
+/*
+ * Time lapse
+ */
+.DOPBCP-form .dopbcp-input-wrapper input[type=text].dopbcp-time-lapse{
+    background-image: url('../images/sprite.png');
+    background-position: -5px -246px;
+    padding: 4px 9px 4px 34px;
+    width: 80px;
+}
+/*
+ * End time lapse.
+ */
+/*
+ * End text.
+ */
+
+/*
+ * Begin textarea.
+ */
+.DOPBCP-form .dopbcp-input-wrapper textarea{
+    -webkit-appearance: none;
+    background: #ffffff;
+    border: 1px solid #c9c9c9;
+    border-radius:0px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    color: #acacac;
+    display: block;
+    float: left;
+    font-family: 'Open Sans';
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 20px;
+    margin: 0;
+    outline: none;
+    padding: 4px 9px;
+    resize: vertical;
+    width: 90%;
+}
+
+.DOPBCP-form .dopbcp-input-wrapper textarea:focus{
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    outline: none;
+}
+
+.DOPBCP-form .dopbcp-input-wrapper textarea:disabled{
+    opacity: 0.5;
+}
+/*
+ * End textarea.
+ */
+
+/*
+ * Begin checkbox & radio.
+ */
+.DOPBCP-form .dopbcp-input-wrapper input[type=checkbox],
+.DOPBCP-form .dopbcp-input-wrapper input[type=radio]{
+    background: #ffffff;
+    border: 1px solid #c9c9c9 !important;
+    -webkit-border-radius: 32px;
+    -moz-border-radius: 32px;
+    border-radius: 32px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    float: left;
+    height: auto;
+    margin: 1px 5px 1px 0;
+    padding: 8px !important;
+    position: relative;
+    width: auto;
+}
+
+.DOPBCP-form .dopbcp-input-wrapper input[type=checkbox]{
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    -webkit-appearance: none;
+}
+
+.DOPBCP-form .dopbcp-input-wrapper input[type=checkbox]:hover,
+.DOPBCP-form .dopbcp-input-wrapper input[type=radio]:hover{
+    border: 1px solid #ff6300 !important;
+    color: #ff6300 !important;
+    -webkit-appearance: none;
+}
+
+.DOPBCP-form .dopbcp-input-wrapper input[type=checkbox]:checked:before,
+.DOPBCP-form .dopbcp-input-wrapper input[type=checkbox]:checked:after,
+.DOPBCP-form .dopbcp-input-wrapper input[type=radio]:checked:before,
+.DOPBCP-form .dopbcp-input-wrapper input[type=radio]:checked:after{
+    background: #ff6300 !important;
+    -webkit-border-radius: 32px;
+    -moz-border-radius: 32px;
+    border-radius: 32px;
+    border: 1px solid #ff6300 !important;
+    color: #ff6300 !important;
+    content: ' ' !important;
+    font-size: 16px !important;
+    left: -1px !important;
+    height: 16px !important;
+    line-height: 16px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: absolute !important;
+    top: -1px !important;
+    width: 16px !important;
+}
+
+.DOPBCP-form .dopbcp-input-wrapper input[type=checkbox]:checked:before,
+.DOPBCP-form .dopbcp-input-wrapper input[type=checkbox]:checked:after{
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+.DOPBCP-form .dopbcp-input-wrapper input[type=checkbox]:disabled,
+.DOPBCP-form .dopbcp-input-wrapper input[type=checkbox]:disabled:hover,
+.DOPBCP-form .dopbcp-input-wrapper input[type=radio]:disabled,
+.DOPBCP-form .dopbcp-input-wrapper input[type=radio]:disabled:hover{
+    border: 1px solid #c9c9c9 !important;
+    cursor: default !important;
+    opacity: 0.5;
+}
+/*
+ * End checkbox.
+ */
+
+/*
+ * Begin select.
+ */
+.DOPBCP-form .DOPSelect.dopselect-single{
+    float: left;
+    width:220px !important;
+}
+
+.DOPBCP-form .DOPSelect.dopselect-single ul{
+    width:218px !important;
+}
+
+.DOPBCP-form .DOPSelect.dopselect-single ul li{
+    width:218px !important;
+}
+
+.DOPSelect.dopselect-single.dopbcp-small{
+    width: 80px;
+}
+
+.DOPSelect.dopselect-single.dopbcp-small .dopselect-select .dopselect-selection{
+    width: 40px;
+}
+
+/*
+ * Options.
+ */
+.DOPSelect.dopselect-single.dopbcp-small ul{
+    width: 78px;
+}
+
+.DOPSelect.dopselect-single.dopbcp-small ul li{
+    width: 60px;
+}
+/*
+ * End select.
+ */
+
+/*
+ * Begin button/submit.
+ */
+.DOPBCP-form input[type=button],
+.DOPBCP-form input[type=submit]{
+    -webkit-appearance: none;
+    background: #ff6300;
+    border: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    color: #ffffff;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 40px;
+    height: 40px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0;
+    text-align: center;
+    width: 49%;
+    -webkit-transition: background 300ms linear;
+    -moz-transition: background 300ms linear;
+    -o-transition: background 300ms linear;
+    transition: background 300ms linear;
+}
+
+.DOPBCP-form input[type=button].dopbcp-reset{
+    float:right !important;
+}
+
+.DOPBCP-form input[type=button].dopbcp-right,
+.DOPBCP-form input[type=submit].dopbcp-right{
+    margin: 0 0 0 5px;
+}
+
+.DOPBCP-form input[type=button]:hover,
+.DOPBCP-form input[type=button]:focus,
+.DOPBCP-form input[type=submit]:hover,
+.DOPBCP-form input[type=submit]:focus{
+    background: #464646;
+    outline: none;
+}
+
+.DOPBCP-form input[type=button]:disabled,
+.DOPBCP-form input[type=submit]:disabled{
+    opacity: 0.5;
+}
+
+.DOPBCP-form .dopbcp-input-wrapper input[type=button],
+.DOPBCP-form .dopbcp-input-wrapper input[type=submit]{
+    width: 170px;
+}
+/*
+ * End button.
+ */
+
+/*
+ * Begin switch.
+ */
+.DOPBCP-form .dopbcp-input-wrapper .dopbcp-switch{
+    float: left;
+    height: 20px;
+    position: relative;
+    width: 100px;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select: none;
+}
+
+.DOPBCP-form .dopbcp-input-wrapper .dopbcp-switch .dopbcp-switch-checkbox{
+    display: none !important;
+}
+
+.DOPBCP-form .dopbcp-input-wrapper .dopbcp-switch .dopbcp-switch-label{
+    border: 1px solid #f1705c;
+    cursor: pointer;
+    display: block;
+    height: 18px;
+    margin: 0 !important;
+    overflow: hidden;
+    width: 98px !important;
+}
+
+.DOPBCP-form .dopbcp-input-wrapper .dopbcp-switch .dopbcp-switch-inner{
+    margin-left: -100%;
+    width: 200%;
+    -webkit-transition: margin 0.3s ease-in 0s;
+    -moz-transition: margin 0.3s ease-in 0s;
+    -o-transition: margin 0.3s ease-in 0s;
+    transition: margin 0.3s ease-in 0s;
+}
+
+.DOPBCP-form .dopbcp-input-wrapper .dopbcp-switch .dopbcp-switch-inner:before,
+.DOPBCP-form .dopbcp-input-wrapper .dopbcp-switch .dopbcp-switch-inner:after{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #acacac;
+    float: left;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 18px;
+    height: 18px;
+    padding: 0 10px;
+    width: 50%;
+}
+
+.DOPBCP-form .dopbcp-input-wrapper .dopbcp-switch .dopbcp-switch-inner:before{
+    text-align: left;
+}
+
+.DOPBCP-form .dopbcp-input-wrapper .dopbcp-switch .dopbcp-switch-inner:after{
+    text-align: right;
+}
+
+.DOPBCP-form .dopbcp-input-wrapper .dopbcp-switch .dopbcp-switch-switch{
+    background: #f1705c;
+    bottom: 0;
+    height: 20px;
+    margin: 0;
+    padding: 0 !important;
+    position: absolute;
+    right: 80px;
+    top: 0;
+    width: 20px;
+    -webkit-transition: all 0.3s ease-in 0s;
+    -moz-transition: all 0.3s ease-in 0s;
+    -o-transition: all 0.3s ease-in 0s;
+    transition: all 0.3s ease-in 0s; 
+}
+
+.DOPBCP-form .dopbcp-input-wrapper .dopbcp-switch .dopbcp-switch-checkbox:checked+.dopbcp-switch-label .dopbcp-switch-inner{
+    margin-left: 0;
+}
+
+.DOPBCP-form .dopbcp-input-wrapper .dopbcp-switch .dopbcp-switch-checkbox:checked+.dopbcp-switch-label{
+    border-color: #9cbc72;
+}
+
+.DOPBCP-form .dopbcp-input-wrapper .dopbcp-switch .dopbcp-switch-checkbox:checked+.dopbcp-switch-label .dopbcp-switch-switch{
+    background: #9cbc72;
+    right: 0; 
+}
+/*
+ * End switch.
+ */
+
+/*
+ * Begin help.
+ */
+.DOPBCP-form .dopbcp-input-wrapper .dopbcp-button.dopbcp-help{
+    background-position: 0 -280px;
+    height: 30px;
+    margin: 0 0 0 5px;
+    width: 30px;
+}
+
+.DOPBCP-form .dopbcp-input-wrapper .dopbcp-button.dopbcp-help.dopbcp-switch-help{
+    background-position: -5px -285px;
+    height: 20px;
+    margin: 0 0 0 5px;
+    width: 20px;
+}
+
+.DOPBCP-form .dopbcp-input-wrapper .dopbcp-button.dopbcp-help .dopbcp-info{
+    margin: 32px 0 0 0;
+}
+
+.DOPBCP-form .dopbcp-input-wrapper .dopbcp-button.dopbcp-help.dopbcp-switch-help .dopbcp-info{
+    margin: 22px 0 0 0;
+}
+/*
+ * End help.
+ */
+
+/*
+ * Begin warning info.
+ */
+.DOPBCP-form .dopbcp-input-wrapper .dopbcp-button.dopbcp-warning-info{
+    background: #f1705c url('../images/sprite.png');
+    background-position: -210px -280px;
+    display: none;
+    height: 30px;
+    margin: 0 0 0 5px;
+    width: 30px;
+}
+
+.DOPBCP-form .dopbcp-input-wrapper .dopbcp-button.dopbcp-warning-info.dopbcp-checkbox-warning-info{
+    background-position: -215px -285px;
+    height: 20px;
+    margin: 0 0 0 5px;
+    width: 20px;
+}
+
+.DOPBCP-form .dopbcp-input-wrapper .dopbcp-button.dopbcp-warning-info .dopbcp-info{
+    background-color: #f1705c;
+    margin: 32px 0 0 -175px;
+    max-width: 185px;
+    width: 185px;
+}
+
+.DOPBCP-form .dopbcp-input-wrapper .dopbcp-button.dopbcp-warning-info.dopbcp-checkbox-warning-info .dopbcp-info{
+    margin: 32px 0 0 -175px;
+}
+/*
+ * End warning info.
+ */
+/*
+ * ***************************************************************************** End form inputs.
+ */
+
+/*
+ * ***************************************************************************** Begin jQuery UI datepicker.
+ */
+.DOPBCP-admin-datepicker.ui-datepicker{
+    background: #ffffff !important;
+    border: 1px solid #464646 !important;
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    width: 218px !important;
+}
+
+/*
+ * jQuery UI datepicker header.
+ */
+.DOPBCP-admin-datepicker.ui-datepicker .ui-datepicker-header{
+    background: #464646 !important;
+    border: none;
+    border-bottom: 1px solid #464646 !important;
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+}
+
+.DOPBCP-admin-datepicker.ui-datepicker .ui-datepicker-header .ui-datepicker-next,
+.DOPBCP-admin-datepicker.ui-datepicker .ui-datepicker-header .ui-datepicker-prev{
+    background-color: #464646 !important;
+    background-image: url('../images/sprite.png') !important;
+    border: none !important;
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    border-radius: 0 !important;
+    cursor: pointer !important;
+    height: 38px !important;
+    left: auto !important;
+    position: relative !important;
+    right: auto !important;
+    top: auto !important;
+    width: 38px !important;
+    -webkit-transition: background-color 300ms linear !important;
+    -moz-transition: background-color 300ms linear !important;
+    -o-transition: background-color 300ms linear !important;
+    transition: background-color 300ms linear !important;
+}
+
+.DOPBCP-admin-datepicker.ui-datepicker .ui-datepicker-header .ui-datepicker-next:hover,
+.DOPBCP-admin-datepicker.ui-datepicker .ui-datepicker-header .ui-datepicker-prev:hover{
+    background-color: #acacac !important;
+}
+
+.DOPBCP-admin-datepicker.ui-datepicker .ui-datepicker-header .ui-datepicker-next.ui-state-disabled,
+.DOPBCP-admin-datepicker.ui-datepicker .ui-datepicker-header .ui-datepicker-prev.ui-state-disabled{
+    display: none !important;
+}
+
+.DOPBCP-admin-datepicker.ui-datepicker .ui-datepicker-header .ui-datepicker-next{
+    background-position: -241px -81px !important;
+    float: right !important;
+}
+
+.DOPBCP-admin-datepicker.ui-datepicker .ui-datepicker-header .ui-datepicker-prev{
+    background-position: -201px -81px !important;
+    float: left !important;
+}
+
+.DOPBCP-admin-datepicker.ui-datepicker .ui-datepicker-header .ui-datepicker-next .ui-icon,
+.DOPBCP-admin-datepicker.ui-datepicker .ui-datepicker-header .ui-datepicker-prev .ui-icon{
+    display: none !important;
+}
+
+.DOPBCP-admin-datepicker.ui-datepicker .ui-datepicker-header .ui-datepicker-title,
+.DOPBCP-admin-datepicker.ui-datepicker .ui-datepicker-header .ui-datepicker-month,
+.DOPBCP-admin-datepicker.ui-datepicker .ui-datepicker-header .ui-datepicker-year{
+    color: #ffffff !important;
+    font-family: 'Open Sans', sans-serif !important;
+    font-size: 15px !important;
+    font-weight: 300 !important;
+    line-height: 38px !important;
+    text-align: center !important;
+}
+
+.DOPBCP-admin-datepicker.ui-datepicker .ui-datepicker-header .ui-datepicker-title{
+    margin: 0 38px !important;
+}
+
+/*
+ * jQuery UI datepicker calendar.
+ */
+.DOPBCP-admin-datepicker.ui-datepicker .ui-datepicker-calendar{
+    border-collapse: collapse !important;
+    border-spacing: 0 !important;
+    margin: 0 !important;
+    table-layout: fixed !important;
+    width: 100% !important;
+}
+
+.DOPBCP-admin-datepicker.ui-datepicker .ui-datepicker-calendar th{
+    background: #acacac !important;
+    border: 1px solid #c9c9c9 !important;
+    border-top: none !important;
+    color: #ffffff !important;
+    font-family: 'Open Sans', sans-serif !important;
+    font-size: 13px !important;
+    font-weight: 300 !important;
+    line-height: 18px !important;
+    padding: 0 !important;
+    text-align: center !important;
+}
+
+.DOPBCP-admin-datepicker.ui-datepicker .ui-datepicker-calendar td{
+    border: 1px solid #c9c9c9 !important;
+    padding: 0 !important;
+}
+
+.DOPBCP-admin-datepicker.ui-datepicker .ui-datepicker-calendar td.ui-datepicker-other-month{
+    background: #eeeeee !important;
+    line-height: 17px !important;
+}
+
+.DOPBCP-admin-datepicker.ui-datepicker .ui-datepicker-calendar .ui-state-disabled span,
+.DOPBCP-admin-datepicker.ui-datepicker .ui-datepicker-calendar a{
+    background: #ffffff !important;
+    border: 0 !important;
+    color: #acacac !important;
+    display: block !important;
+    font-family: 'Open Sans', sans-serif !important;
+    font-size: 13px !important;
+    font-weight: 300 !important;
+    line-height: 19px !important;
+    padding: 0 !important;
+    text-align: center !important;
+    text-decoration: none !important;
+}
+
+.DOPBCP-admin-datepicker.ui-datepicker .ui-datepicker-calendar a{
+    color: #464646 !important;
+}
+
+.DOPBCP-admin-datepicker.ui-datepicker .ui-datepicker-calendar a.ui-state-active,
+.DOPBCP-admin-datepicker.ui-datepicker .ui-datepicker-calendar a:hover{
+    border: 1px solid #464646 !important;
+    line-height: 17px !important;
+}
+
+/*
+ * ***************************************************************************** Begin responsive.
+ */
+.DOPBCP-admin.dopbcp-notebook .dopbcp-notebook-hidden,
+.DOPBCP-admin.dopbcp-tablet .dopbcp-tablet-hidden,
+.DOPBCP-admin.dopbcp-phone .dopbcp-phone-hidden,
+.DOPBCP-admin.dopbcp-responsive-hidden .dopbcp-responsive-hidden{
+    display: none;
+}
+
+.DOPBCP-admin.dopbcp-tablet,
+.DOPBCP-admin.dopbcp-phone{
+    margin: 10px 10px 0 0;
+}
+/*
+ * ***************************************************************************** End responsive.
+ */
+
+/*
+ * ***************************************************************************** Begin retina.
+ */
+@media (-webkit-min-device-pixel-ratio: 2), 
+       (min-resolution: 192dpi){
+    #DOPBCP-messages-box .dopbcp-icon-active,
+    #DOPBCP-messages-box .dopbcp-icon-success,
+    #DOPBCP-messages-box .dopbcp-icon-error,
+    #DOPBCP-messages-box .dopbcp-close,
+    #DOPBCP-confirmation-box .dopbcp-icon,
+    #DOPBCP-go-top,
+    .DOPBCP-admin .dopbcp-main section.dopbcp-content-wrapper .dopbcp-box-header.dopbcp-display .dopbcp-button,
+    .DOPBCP-admin .dopbcp-main section.dopbcp-content-wrapper .dopbcp-box-header.dopbcp-hide .dopbcp-button,
+    .DOPBCP-admin .dopbcp-main table.dopbcp-content-wrapper .dopbcp-sidebar .dopbcp-sidebar-header .dopbcp-button.dopbcp-add,
+    .DOPBCP-admin .dopbcp-main table.dopbcp-content-wrapper .dopbcp-sidebar .dopbcp-sidebar-header .dopbcp-button.dopbcp-calendar,
+    .DOPBCP-admin .dopbcp-main table.dopbcp-content-wrapper .dopbcp-sidebar .dopbcp-sidebar-header .dopbcp-button.dopbcp-settings,
+    .DOPBCP-admin .dopbcp-main table.dopbcp-content-wrapper .dopbcp-sidebar .dopbcp-sidebar-header .dopbcp-button.dopbcp-notifications,
+    .DOPBCP-admin .dopbcp-main table.dopbcp-content-wrapper .dopbcp-sidebar .dopbcp-sidebar-header .dopbcp-button.dopbcp-payments,
+    .DOPBCP-admin .dopbcp-main table.dopbcp-content-wrapper .dopbcp-sidebar .dopbcp-sidebar-header .dopbcp-button.dopbcp-users,
+    .DOPBCP-admin .dopbcp-main table.dopbcp-content-wrapper .dopbcp-sidebar .dopbcp-sidebar-header .dopbcp-button.dopbcp-delete,
+    .DOPBCP-admin .dopbcp-inputs-header.dopbcp-display .dopbcp-button,
+    .DOPBCP-admin .dopbcp-inputs-header.dopbcp-hide .dopbcp-button,
+    .DOPBCP-admin .dopbcp-input-wrapper .dopbcp-button.dopbcp-warning-info,
+    .DOPBCP-admin-datepicker.ui-datepicker .ui-datepicker-header .ui-datepicker-next,
+    .DOPBCP-admin-datepicker.ui-datepicker .ui-datepicker-header .ui-datepicker-prev{
+        background-image: url('../images/sprite-retina.png') !important;
+        background-size: 500px 500px !important;
+    }
+}
+/*
+ * ***************************************************************************** End retina.
+ */
+/*
+ * ***************************************************************************** End jQuery UI datepicker.
+ */
+
+/*
+ * ********************************************************* Begin messages box.
+ */
+#DOPBCP-messages-background{
+    background: #000000;
+    display: none;
+    height: 100%;
+    left: 0;
+    opacity: 0.1;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10000000;
+}
+
+#DOPBCP-messages-box{
+    background: #252525;
+    border: none;
+    left: 50%;
+    margin: 0 0 0 -125px;
+    min-height: 40px;
+    padding: 20px 10px;
+    position: fixed;
+    top: -80px;
+    width: 230px;
+    visibility: hidden; 
+    z-index: 10000001;
+    -webkit-transition: margin-top 300ms ease-out, top 300ms ease-out, visibility 300ms ease-out;
+    -moz-transition: margin-top 300ms ease-out, top 300ms ease-out, visibility 300ms ease-out;
+    -o-transition: margin-top 300ms ease-out, top 300ms ease-out, visibility 300ms ease-out;
+    transition: margin-top 300ms ease-out, top 300ms ease-out, visibility 300ms ease-out;
+}
+
+#DOPBCP-messages-box .dopbcp-icon-active,
+#DOPBCP-messages-box .dopbcp-icon-success,
+#DOPBCP-messages-box .dopbcp-icon-error{
+    display: none;
+    float: left;
+    height: 40px;
+    width: 40px;
+}
+
+#DOPBCP-messages-box .dopbcp-icon-active{
+    background: url('../images/sprite.png') 0 -40px;
+    -webkit-animation-duration: 1s; 
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-name: dopbcp-loader; 
+    -webkit-animation-timing-function: linear;
+    -webkit-transition-property: -webkit-transform;
+    -webkit-transition-duration: 1s;
+    -moz-animation-duration: 1s; 
+    -moz-animation-name: dopbcp-loader; 
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -moz-transition-property: -moz-transform;
+    -moz-transition-duration: 1s;
+    animation-duration: 1s; 
+    animation-name: dopbcp-loader; 
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transition-property: -moz-transform;
+    transition-duration: 1s;
+}
+
+@-webkit-keyframes dopbcp-loader{
+    from {-webkit-transform: rotate(0deg);}
+    to {-webkit-transform: rotate(360deg);}
+}
+
+@-moz-keyframes dopbcp-loader{
+    from {-moz-transform: rotate(0deg);}
+    to {-moz-transform: rotate(360deg);}
+}
+
+@keyframes dopbcp-loader{
+    from {-moz-transform: rotate(0deg);}
+    to {-moz-transform: rotate(360deg);}
+}
+
+#DOPBCP-messages-box .dopbcp-icon-success{
+    background: url('../images/sprite.png') -40px -40px;
+}
+
+#DOPBCP-messages-box .dopbcp-icon-error{
+    background: url('../images/sprite.png') -80px -40px;
+}
+
+#DOPBCP-messages-box .dopbcp-message{
+    color: #e1e1e1;
+    display: table-cell;
+    font-size: 12px;
+    font-weight: 300;
+    height: 40px;
+    line-height: 15px;
+    min-height: 40px;
+    vertical-align: middle;
+    width: 175px;
+}
+
+#DOPBCP-messages-box .dopbcp-close{
+    background-color: #252525;
+    background-image: url('../images/sprite.png');
+    background-position: -160px -40px;
+    border: 1px solid #ffffff;
+    border-right: none;
+    border-top: none;
+    display: none;
+    height: 25px;
+    position: absolute;
+    right: 0;
+    text-decoration: none;
+    top: 0;
+    width: 25px;
+    -webkit-transition: background-color 300ms linear;
+    -moz-transition: background-color 300ms linear;
+    -o-transition: background-color 300ms linear;
+    transition: background-color 300ms linear;
+}
+
+#DOPBCP-messages-box .dopbcp-close:hover{
+    background-color: #ff6300;
+}
+
+#DOPBCP-messages-background.dopbcp-active{
+    display: block;
+}
+
+#DOPBCP-messages-box.dopbcp-active{
+    margin: -40px 0 0 -125px;
+    top: 50%;
+    visibility: visible; 
+}
+
+#DOPBCP-messages-box.dopbcp-active-info .dopbcp-icon-active,
+#DOPBCP-messages-box.dopbcp-active .dopbcp-icon-active{
+    display: block;
+}
+
+#DOPBCP-messages-box.dopbcp-success .dopbcp-icon-success{
+    display: block;
+}
+
+#DOPBCP-messages-box.dopbcp-error .dopbcp-icon-error{
+    display: block;
+}
+
+#DOPBCP-messages-box.dopbcp-active-info,
+#DOPBCP-messages-box.dopbcp-error,
+#DOPBCP-messages-box.dopbcp-success{
+    top: 33px;
+    visibility: visible; 
+}
+
+#DOPBCP-messages-box.dopbcp-error .dopbcp-close,
+#DOPBCP-messages-box.dopbcp-success .dopbcp-close{
+    display: block;
+}
+/*
+ * *********************************************************** End messages box.
+ */
+
+/*
+ * ***************************************************** Begin confirmation box.
+ */
+#DOPBCP-confirmation-box{
+    background: #252525;
+    border: none;
+    left: 50%;
+    margin: 0 0 0 -125px;
+    min-height: 40px;
+    padding: 20px 10px;
+    position: fixed;
+    top: -120px;
+    width: 230px;
+    visibility: hidden;
+    z-index: 10000001;
+    -webkit-transition: margin-top 300ms ease-out, top 300ms ease-out, visibility 300ms ease-out;
+    -moz-transition: margin-top 300ms ease-out, top 300ms ease-out, visibility 300ms ease-out;
+    -o-transition: margin-top 300ms ease-out, top 300ms ease-out, visibility 300ms ease-out;
+    transition: margin-top 300ms ease-out, top 300ms ease-out, visibility 300ms ease-out;
+}
+
+#DOPBCP-confirmation-box .dopbcp-icon{
+    background: url('../images/sprite.png') -120px -40px;
+    float: left;
+    height: 40px;
+    width: 40px;
+}
+
+#DOPBCP-confirmation-box .dopbcp-message{
+    color: #e1e1e1;
+    display: table-cell;
+    font-size: 12px;
+    font-weight: 300;
+    height: 40px;
+    line-height: 15px;
+    min-height: 40px;
+    vertical-align: middle;
+    width: 190px;
+}
+
+#DOPBCP-confirmation-box .dopbcp-buttons{
+    background: #ffffff;
+    margin: 20px -10px -20px -10px;
+    overflow: hidden;
+    width: 250px;
+}
+
+#DOPBCP-confirmation-box .dopbcp-buttons a{
+    background: #252525;
+    color: #ffffff;
+    display: block;
+    font-size: 14px;
+    font-weight: 300;
+    height: 39px;
+    line-height: 39px;
+    margin: 1px 0 0 0;
+    text-align: center;
+    text-decoration: none;
+    width: 124.5px;
+    -webkit-transition: background-color 600ms linear;
+    -moz-transition: background-color 600ms linear;
+    -o-transition: background-color 600ms linear;
+    transition: background-color 600ms linear;
+}
+
+#DOPBCP-confirmation-box .dopbcp-buttons a.dopbcp-button-yes{
+    float: left;
+}
+
+#DOPBCP-confirmation-box .dopbcp-buttons a.dopbcp-button-no{
+    float: right;
+}
+
+#DOPBCP-confirmation-box .dopbcp-buttons a:hover{
+    background: #ff6300;
+}
+
+#DOPBCP-confirmation-box.dopbcp-active{
+    margin: -60px 0 0 -125px;
+    top: 50%;
+    visibility: visible; 
+}
+/*
+ * ******************************************************* End confirmation box.
+ */
