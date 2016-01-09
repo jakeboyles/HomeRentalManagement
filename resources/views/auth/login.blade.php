@@ -33,6 +33,8 @@
 								<input type="password" class="form-control" name="password">
 							</div>
 						</div>
+
+						<input type="submit" class="btn btn-primary" value="Login">
 					</form>
 				</div>
 			</div>
