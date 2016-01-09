@@ -15,13 +15,13 @@
 			</div>
 		</div>
 		<div id="homeFeatures" class="row homeFeatures">
-			<div class="col-md-12 icons">
+			<div class="col-md-12 icons clearfix">
 				<h4><i class="fa fa-home"></i> 5 Bedrooms</h4>
 				<h4><i class="fa fa-male"></i> 3 Bathrooms</h4>
 				<h4><i class="fa fa-bed"></i> Sleeps 14</h4>
 				<h4><i class="fa fa-building"></i> 3200 sq. Feet</h4>
 			</div>
-			<div class="col-md-8">
+			<div class="col-md-8 col-xs-12">
 				<H1>Norris Lake Home Rental, Grandison House</H1>
 				<?php echo htmlspecialchars_decode(stripslashes($content->main_text)); ?>
 			</div>

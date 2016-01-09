@@ -10,6 +10,7 @@ use Stripe;
 use Redirect;
 use DB;
 use App\Booking;
+use Mail;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -59,6 +60,19 @@ class HomeController extends Controller {
 
 		return view('pages.home',array("Bookings"=>$bookings,'content'=>$home,'photos'=>$photos));
 	}
+
+
+	/**
+	 * Show the application dashboard to the user.
+	 *
+	 * @return Response
+	 */
+	public function thankYou()
+	{
+
+		return view('pages.thankYou');
+	}
+
 
 	public function admin()
 	{
@@ -117,6 +131,13 @@ class HomeController extends Controller {
 		$booking->check_out = $request['reservation_data'][0]['check_out'];
 		$booking->stripe_id = $charge['id'];
 		$booking->save();
+
+
+		Mail::send('emails.booked', ['booking' => $booking], function ($m) use ($booking,$request) {
+            $m->from('admin@grandisonhouse.com', 'Grandison House');
+
+            $m->to($request['form'][2]['value'], $request['form'][0]['value'])->subject('Your Booking!');
+        });
 
 		return json_encode(array('success'=>true));
 	}
