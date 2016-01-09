@@ -4334,7 +4334,8 @@
                                      currency_code: methods_currency.data['code'],
                                      reservation_data: methods_cart.cart,
                                      form: methods_form.get(),
-                                     page_url: window.location.href}, function(data){console.log(data);
+                                     page_url: window.location.href}, function(data){
+
                     data = $.trim(data);
                     
                     /*
@@ -4347,6 +4348,16 @@
                         
                         return false;
                     }
+
+                    data = JSON.parse(data);
+
+
+                    if(data.failure == true)
+                    {
+                      methods_info.toggleMessages(data.message,'dopbcp-error');
+                      methods_reservation.clear();
+                      return false;
+                    }
                     
                     // if (methods_order.data['redirect'] !== ''){
                     //     window.location.href = methods_order.data['redirect'];
@@ -4354,7 +4365,7 @@
 
                     $('#DOPBCPCalendar-submit'+ID).css('display', 'block');
                     $('#DOPBCPCalendar-submit-loader'+ID).css('display', 'none');
-                    methods_info.toggleMessages((methods_order.text['success']),'dopbcp-success');
+                    methods_info.toggleMessages("Your booking has been made!",'dopbcp-success');
                     methods_reservation.clear();
 
                     window.location.href = "/thank-you";

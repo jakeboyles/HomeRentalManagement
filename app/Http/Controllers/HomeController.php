@@ -84,6 +84,22 @@ class HomeController extends Controller {
 	public function bookCalendar(Request $request)
 	{
 
+		$curYir = date("Y");//current year
+		$MDay = date('Y-m-d', strtotime("may $curYir first monday")); // memorial day
+		$LDay = date('Y-m-d', strtotime("september $curYir first monday"));  //labor day
+
+		$checkIn = $request['reservation_data'][0]['check_in'];
+		$checkOut = $request['reservation_data'][0]['check_out'];
+
+
+		if (($checkIn > $MDay) && ($checkIn < $LDay) && ($checkOut > $MDay) && ($checkOut < $LDay) )
+	    {
+	      if( (date('w', strtotime($checkIn)) != 6) && (date('w', strtotime($checkOut)) != 6) )
+	      {
+	      	return json_encode(array('failure'=>true,'message'=>'Bookings made between labor day and memorial day must be from Saturday to Saturday.'));
+	      }
+	    }
+
 		$total = $request['reservation_data'][0]['price_total'];
 
         $charge = Stripe::charges()->create(array(
