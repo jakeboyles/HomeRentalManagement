@@ -33,7 +33,7 @@
 					<div class="col-md-12">
 						<form enctype="multipart/form-data" id="upload_form" role="form" method="POST" action="/images/add" >
 							<input type="hidden" name="_token" value="{{ csrf_token()}}">
-							<input type="file" class="" name="file" id="image">
+							<input type="file" class="" multiple name="file[]" id="image">
 							<br>
 							<button type="submit" class="btn btn-primary">Add Image</button>
 						</form>

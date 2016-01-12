@@ -75,18 +75,20 @@ class AdminController extends Controller {
 
 	public function addImage(Request $request)
 	{
-        $file = $request->file('file');
-		$extension = $file->getClientOriginalExtension();
+        $files = $request->file('file');
+		foreach($files as $file) {
+		  
+		  	$destinationPath = 'public/images/'; // upload path
+            $filename = str_random(40).'_'.$file->getClientOriginalName();
+            $extension = $file->getClientOriginalExtension(); // getting image extension
+            Storage::disk('local')->put($filename,  File::get($file));
 
-		$name = $file->getFilename().time().'.'.$extension;
-
-		Storage::disk('local')->put($name,  File::get($file));
-
-		$media = new Media;
-		$media->location = $name;
-		$media->extension = $extension;
-		$media->type = 'image';
-		$media->save();
+	      	$media = new Media;
+			$media->location = $filename;
+			$media->extension = $extension;
+			$media->type = 'image';
+			$media->save();
+	    }
 
 		return back()->withInput();
 
