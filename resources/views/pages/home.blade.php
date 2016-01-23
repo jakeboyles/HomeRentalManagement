@@ -48,6 +48,13 @@
 		</div>
 	</div>
 </div>
+
+<div id="homeImages" class="images">
+<div class="container">
+<h2>Contact Us</h2>
+<script type="text/javascript" src="https://form.jotform.com/jsform/60225282636150"></script>
+</div>
+</div>
 <script type="text/javascript">
 $('#frontend').DOPFrontendBookingCalendarPRO({
 'ID': 1,
