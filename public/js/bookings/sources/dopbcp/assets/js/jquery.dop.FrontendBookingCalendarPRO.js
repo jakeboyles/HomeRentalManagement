@@ -14,7 +14,7 @@
 (function($){
     'use strict';
 
-    Stripe.setPublishableKey('pk_test_Ay33qMt7vSol2CaER3fDzJCs');
+    Stripe.setPublishableKey('pk_live_lMnYPoEuywIhhruVQjjV5Ih6');
   
     $.fn.DOPFrontendBookingCalendarPRO = function(options){
         /*
