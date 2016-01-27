@@ -155,6 +155,13 @@ class HomeController extends Controller {
             $m->to($request['form'][2]['value'], $request['form'][0]['value'])->subject('Your Booking!');
         });
 
+        Mail::send('emails.newbooking', ['booking' => $booking], function ($m) use ($booking,$request) {
+            $m->from('admin@grandisonhouse.com', 'Grandison House');
+
+            $m->to('shelli.grandison@aol.com', 'Shelli Grandison')->subject('Your Booking!');
+            $m->bcc('jake@jibdesigns.com', 'Jake Boyles');
+        });
+
 		return json_encode(array('success'=>true));
 	}
 
