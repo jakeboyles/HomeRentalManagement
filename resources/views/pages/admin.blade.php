@@ -43,6 +43,7 @@
                 <th>Name</th>
 			    <th>Check-in</th>
 			    <th>Check-out</th>
+			    <th>Email</th>
 			    <th>Notes</th>
             </tr>
         </tfoot>
@@ -52,6 +53,7 @@
 			    <td>{{$booking->FullName()}}</td>
 			    <td>{{$booking->check_in}}</td>
 			    <td>{{$booking->check_out}}</td>
+			    <td>{{booking->email}}</td>
 			    <td>{{$booking->message}}</td>
 			  </tr>
 			   @endforeach
