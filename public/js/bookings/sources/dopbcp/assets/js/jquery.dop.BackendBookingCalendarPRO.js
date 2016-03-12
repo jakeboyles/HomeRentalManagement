@@ -2146,8 +2146,17 @@
                     }
                 }
 
+                var info = {
+                    start:$('#DOPBCP-start-date-view0').val(),
+                    end:$("#DOPBCP-end-date-view0").val(),
+                    message: $("#DOPBCP-notes").val(),
+                    status:$("#DOPBCP-status").val(),
+                }
+
                 $.post(saveURL, {dopbcp_calendar_id: ID,
-                                 dopbcp_schedule: JSON.stringify(Schedule)}, function(data){
+                                 dopbcp_schedule: JSON.stringify(Schedule),
+                                 data: JSON.stringify(info),
+                             }, function(data){
                     if (year === yearEndSave 
                             && month === monthEndSave){
                         methods_message.init('success',

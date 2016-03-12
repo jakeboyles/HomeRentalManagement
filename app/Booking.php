@@ -28,4 +28,8 @@ class Booking extends Model implements AuthenticatableContract, CanResetPassword
      */
     protected $hidden = [];
 
+    public function FullName() {
+        return $this->first_name." ".$this->last_name;
+    }
+
 }

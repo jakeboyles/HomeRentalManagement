@@ -78,7 +78,9 @@ class HomeController extends Controller {
 	{
 		$photos = DB::table('media')->get();
 		$home = DB::table('home_page')->first();
-		return view('pages.admin',array("content"=>$home,"photos"=>$photos));
+		$bookings = Booking::all();
+
+		return view('pages.admin',array("content"=>$home,"photos"=>$photos,'bookings'=>$bookings));
 	}
 
 	public function bookCalendar(Request $request)
@@ -179,6 +181,18 @@ class HomeController extends Controller {
 			$booking->date = $date;
 			$booking->price = $book->price;
 			$booking->status = $book->status;
+			$booking->save();
+		}
+
+		$data = json_decode($request->data);
+
+		if($data->status= 'booked')
+		{
+			$booking = new Booking;
+			$booking->first_name = "ADMIN";
+			$booking->message = $data->message;
+			$booking->check_in = $data->start;
+			$booking->check_out = $data->end;
 			$booking->save();
 		}
 

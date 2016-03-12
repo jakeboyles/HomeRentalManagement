@@ -31,6 +31,7 @@
      <link href="/js/bookings/sources/dopbcp/assets/gui/css/jquery.dop.Select.css" rel="stylesheet" />
      <link href="/js/bookings/sources/dopbcp/assets/gui/css/jquery.dop.BackendBookingCalendarPRO.css" rel="stylesheet" />
      <link href="/js/bookings/sources/dopbcp/templates/default/css/jquery.dop.FrontendBookingCalendarPRO.css" rel="stylesheet" />
+     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.11/css/dataTables.jqueryui.min.css" />
 
      <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
      <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
@@ -44,6 +45,7 @@
     <link href="/js/jquery.bxslider/jquery.bxslider.css" rel="stylesheet" />
 
      <script src="/js/main.js"></script>
+     <script src="//cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
 
     @yield('styles')
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->

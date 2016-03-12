@@ -13,6 +13,7 @@ use App\Media;
 use Validator;
 
 use App\Http\Requests;
+use App\Booking;
 use App\Http\Controllers\Controller;
 
 class AdminController extends Controller {
@@ -60,7 +61,8 @@ class AdminController extends Controller {
 
 		$photos = DB::table('media')->get();
 
-		return view('pages.admin',array('content'=>$home,'photos'=>$photos));
+
+		return view('pages.admin',array('content'=>$home,'photos'=>$photos,'bookings'=>$bookings));
 	}
 
 
