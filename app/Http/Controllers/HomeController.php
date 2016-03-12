@@ -186,7 +186,7 @@ class HomeController extends Controller {
 
 		$data = json_decode($request->data);
 
-		if($data->status= 'booked')
+		if($data->status == 'booked')
 		{
 			$booking = new Booking;
 			$booking->first_name = "ADMIN";
