@@ -53,7 +53,7 @@
 			    <td>{{$booking->FullName()}}</td>
 			    <td>{{$booking->check_in}}</td>
 			    <td>{{$booking->check_out}}</td>
-			    <td>{{booking->email}}</td>
+			    <td>{{$booking->email}}</td>
 			    <td>{{$booking->message}}</td>
 			  </tr>
 			   @endforeach
