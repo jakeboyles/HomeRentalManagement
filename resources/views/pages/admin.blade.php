@@ -35,6 +35,7 @@
                 <th>Name</th>
 			    <th>Check-in</th>
 			    <th>Check-out</th>
+			    <th>Email</th>
 			    <th>Notes</th>
             </tr>
         </thead>
